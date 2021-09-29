@@ -1,0 +1,39 @@
+.products {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.item {
+  width: 14%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-pictures {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.item-link {
+  color: black;
+}
+
+.item-link:hover {
+  color: pink;
+}
+
+.home-link {
+  color: green;
+}
+
+.details-item-pictures {
+  width: 500px;
+  border-radius: 50px;
+}
