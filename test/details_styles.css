@@ -1,0 +1,45 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  color: violet;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.text {
+  font-weight: bolder;
+  font-size: large;
+  font-style: oblique;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.home-btn {
+  border-radius: 2px;
+  border-style: none;
+  background-color: violet;
+}
+
+.home-btn > a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: large;
+  font-style: oblique;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
