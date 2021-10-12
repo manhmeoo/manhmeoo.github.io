@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  background-color: gray;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+a {
+  text-overflow: ellipsis;
+  text-decoration: none;
+  color: #757575;
+  font-family: Roboto-Regular;
+  font-size: 13px;
+  line-height: 27px;
+  cursor: pointer;
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  background-color: rgb(186, 225, 254);
+  width: 100%;
+  height: 344px;
+}
+
+.menu {
+  height: 100%;
+  background-color: white;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.menu li:first-child {
+  padding-top: 12px;
+}
+
+.menu li {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.menu > li:hover > a {
+  color: #f36d00;
+  background-color: #eceff1;
+  width: 100%;
+}
+
+.sub-menu > li:hover > a {
+  color: #f36d00;
+  background-color: #eceff1;
+  width: 100%;
+}
+
+.sub-menu {
+  height: 344px;
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+}
+
+.menu > li:hover .sub-menu {
+  display: inline-block;
+}
+
+.sub-menu a {
+  display: inline-block;
+  /* padding: 10px 20px 10px 20px; */
+}
+
+.fa-chevron-right {
+  display: none;
+}
+
+.menu > li:hover i {
+  display: block;
+}
