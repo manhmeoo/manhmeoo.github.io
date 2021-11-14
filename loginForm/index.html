@@ -10,10 +10,10 @@
   <body>
     <div style="background-image: url('images/bg-01.jpg')" class="container">
       <div class="wrap-login">
-        <form>
+        <form style="display: flex; flex-direction: column">
           <span class="login-form-title"> Login </span>
           <div>
-            <label for="fname">Username</label> <br />
+            <label for="username">Username</label> <br />
             <input
               class="input"
               type="text"
@@ -21,7 +21,7 @@
               placeholder="Type your username"
             />
             <br />
-            <label for="lname">Password</label><br />
+            <label for="password">Password</label><br />
             <input
               class="input"
               type="password"
@@ -29,14 +29,17 @@
               placeholder="Type your password"
             />
           </div>
-          <div class="container-login100-form-btn">
-            <div class="wrap-login100-form-btn">
-              <div class="login100-form-bgbtn"></div>
-              <button class="login100-form-btn">Login</button>
-            </div>
-          </div>
+          <button id="myButton" onclick="openRegister()" class="login-form-btn">
+            Login
+          </button>
         </form>
       </div>
     </div>
+    <script>
+      function openRegister() {
+        document.querySelector("body").innerHTML = `${(location.href =
+          "../loginForm/Register.html")}`;
+      }
+    </script>
   </body>
 </html>
