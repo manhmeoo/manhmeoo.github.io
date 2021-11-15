@@ -65,6 +65,7 @@
       let usernameElement = document.getElementById("username");
       let passWordElement = document.getElementById("password");
       let retypePassWordElement = document.getElementById("retypePassword");
+      let notiForm = document.querySelector(".wrap-form");
       let noti;
 
       function submitRegister() {
@@ -86,8 +87,9 @@
             "block";
         } else {
           noti = "Đăng ký tài khoản thành công";
-          document.querySelector("body").innerHTML = "";
-          document.querySelector("body").innerHTML = noti;
+          notiForm.innerHTML = "";
+          notiForm.innerHTML = noti;
+          notiForm.style = `display: flex;align-items: center;justify-content: center;font-family: "Times New Roman", Times, serif;font-size: 39px;color :#fd00ff`;
           return;
         }
       }
