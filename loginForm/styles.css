@@ -27,14 +27,16 @@ body {
   display: block;
   font-family: "Times New Roman", Times, serif;
   font-size: 39px;
-  color: #333333;
-  line-height: 1.2;
+  background: linear-gradient(to right, #19dfe0 0%, #fd00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   font-weight: bolder;
+  letter-spacing: 5px;
 }
 
 .input {
-  font-family: Poppins-Medium;
+  font-family: "Times New Roman", Times, serif;
   font-size: 16px;
   color: #333333;
   line-height: 1.2;
@@ -47,6 +49,7 @@ body {
 }
 
 .form-btn {
+  font-family: "Times New Roman", Times, serif;
   line-height: 20px;
   font-size: 20px;
   margin-top: 30px;
@@ -66,6 +69,9 @@ body {
 }
 
 .alert {
+  font-family: "Times New Roman", Times, serif;
   display: none;
-  color: #4a9ce8;
+  background: linear-gradient(to right, #19dfe0 0%, #fd00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
