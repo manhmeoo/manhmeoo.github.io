@@ -9,36 +9,72 @@
   </head>
   <body>
     <div style="background-image: url('images/bg-01.jpg')" class="container">
-      <div class="wrap-login">
+      <div class="wrap-form">
         <form style="display: flex; flex-direction: column">
-          <span class="login-form-title"> Login </span>
+          <span class="form-title">Login</span>
           <div>
             <label for="username">Username</label> <br />
             <input
+              id="username"
               class="input"
               type="text"
               name="username"
               placeholder="Type your username"
             />
+            <div id="alert-userName" class="alert">
+              tài khoản không được để trống
+            </div>
             <br />
             <label for="password">Password</label><br />
             <input
+              id="password"
               class="input"
               type="password"
               name="pass"
               placeholder="Type your password"
             />
+            <br />
+            <input type="checkbox" onclick="showHidePassword()" />Show Password
+            <div id="alert-passWord" class="alert">
+              mật khẩu không được để trống
+            </div>
           </div>
-          <button id="myButton" onclick="openRegister()" class="login-form-btn">
-            Login
+          <button
+            type="button"
+            id="loginButton"
+            onclick="openRegister()"
+            class="form-btn"
+          >
+            Submit
           </button>
         </form>
       </div>
     </div>
     <script>
+      let usernameElement = document.getElementById("username");
+      let passWordElement = document.getElementById("password");
+
+      function showHidePassword() {
+        if (passWordElement.type === "password") {
+          passWordElement.type = "text";
+        } else {
+          passWordElement.type = "password";
+        }
+      }
+
       function openRegister() {
-        document.querySelector("body").innerHTML = `${(location.href =
-          "../loginForm/Register.html")}`;
+        if (usernameElement.value.length == 0) {
+          document.getElementById("alert-passWord").style.display = "none";
+          s;
+          document.getElementById("alert-userName").style.display = "block";
+          return;
+        } else if (passWordElement.value.length == 0) {
+          document.getElementById("alert-userName").style.display = "none";
+          document.getElementById("alert-passWord").style.display = "block";
+          return;
+        } else
+          document.querySelector("body").innerHTML = `${(location.href =
+            "../loginForm/Register.html")}`;
       }
     </script>
   </body>

@@ -15,7 +15,7 @@ body {
   background-size: cover;
 }
 
-.wrap-login {
+.wrap-form {
   width: 500px;
   background: #fff;
   border-radius: 10px;
@@ -23,7 +23,7 @@ body {
   padding: 20px;
 }
 
-.login-form-title {
+.form-title {
   display: block;
   font-family: "Times New Roman", Times, serif;
   font-size: 39px;
@@ -46,21 +46,26 @@ body {
   padding: 10px;
 }
 
-.login-form-btn {
+.form-btn {
   line-height: 20px;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   border-radius: 20px;
   align-self: center;
   width: 20%;
   color: #fff;
   background-color: #4a9ce8;
   border: none;
-  padding: 2px;
+  padding: 5px;
   transition: 0.1s;
   cursor: pointer;
 }
 
 .login-form-btn:hover {
   background-color: #1d83e2;
+}
+
+.alert {
+  display: none;
+  color: #4a9ce8;
 }

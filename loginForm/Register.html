@@ -5,34 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>register</title>
+    <title>Register</title>
   </head>
   <body>
     <div style="background-image: url('images/bg-01.jpg')" class="container">
-      <div class="wrap-login">
-        <h1>hello</h1>
+      <div class="wrap-form">
         <form style="display: flex; flex-direction: column">
-          <span class="login-form-title"> Login </span>
+          <span class="form-title">Register</span>
           <div>
-            <label for="fname">Username</label> <br />
+            <label for="username">Username</label> <br />
             <input
+              id="username"
               class="input"
               type="text"
               name="username"
               placeholder="Type your username"
             />
+            <div id="alert-userName" class="alert">
+              tài khoản không được để trống
+            </div>
             <br />
-            <label for="lname">Password</label><br />
+            <label for="password">Password</label><br />
             <input
+              id="password"
               class="input"
               type="password"
               name="pass"
               placeholder="Type your password"
             />
+            <div id="alert-passWord" class="alert">
+              mật khẩu phải có từ 6 đến 32 kí tự
+            </div>
+            <br />
+            <label for="retypePassword">retype your Password</label><br />
+            <input
+              id="retypePassword"
+              class="input"
+              type="password"
+              name="pass"
+              placeholder="reType your password"
+            />
+            <br />
+            <div id="alert-retypePassWord" class="alert">
+              không giống mật khẩu đã đặt
+            </div>
           </div>
-          <button class="login-form-btn">Login</button>
+          <button
+            type="button"
+            id="registerButton"
+            onclick="submitRegister()"
+            class="form-btn"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>
+    <script>
+      let usernameElement = document.getElementById("username");
+      let passWordElement = document.getElementById("password");
+      let retypePassWordElement = document.getElementById("retypePassword");
+      let noti;
+
+      function submitRegister() {
+        if (usernameElement.value.length == 0) {
+          document.getElementById("alert-passWord").style.display = "none";
+          document.getElementById("alert-userName").style.display = "block";
+          return;
+        } else if (
+          passWordElement.value.length <= 5 ||
+          passWordElement.value.length >= 33
+        ) {
+          document.getElementById("alert-userName").style.display = "none";
+          document.getElementById("alert-passWord").style.display = "block";
+          return;
+        } else if (retypePassWordElement.value != passWordElement.value) {
+          document.getElementById("alert-userName").style.display = "none";
+          document.getElementById("alert-passWord").style.display = "none";
+          document.getElementById("alert-retypePassWord").style.display =
+            "block";
+        } else {
+          noti = "Đăng ký tài khoản thành công";
+          document.querySelector("body").innerHTML = "";
+          document.querySelector("body").innerHTML = noti;
+          return;
+        }
+      }
+    </script>
   </body>
 </html>
