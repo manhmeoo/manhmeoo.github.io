@@ -22,7 +22,7 @@
               placeholder="Type your username"
             />
             <div id="alert-userName" class="alert">
-              tài khoản không được để trống
+              Please enter a valid username
             </div>
             <br />
             <label for="password">Password</label><br />
@@ -34,7 +34,8 @@
               placeholder="Type your password"
             />
             <div id="alert-passWord" class="alert">
-              mật khẩu phải có từ 6 đến 32 kí tự
+              Please enter a valid password (at least 6 characters and maximum
+              32 characters)
             </div>
             <br />
             <label for="retypePassword">retype your Password</label><br />
@@ -47,7 +48,7 @@
             />
             <br />
             <div id="alert-retypePassWord" class="alert">
-              không giống mật khẩu đã đặt
+              must has same characters as entered password
             </div>
           </div>
           <button
@@ -86,7 +87,7 @@
           document.getElementById("alert-retypePassWord").style.display =
             "block";
         } else {
-          noti = "Đăng ký tài khoản thành công";
+          noti = "successfully Sign Up";
           notiForm.innerHTML = "";
           notiForm.innerHTML = noti;
           notiForm.style = `display: flex;align-items: center;justify-content: center;font-family: "Times New Roman", Times, serif;font-size: 39px;color :#fd00ff`;

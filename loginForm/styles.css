@@ -71,7 +71,5 @@ body {
 .alert {
   font-family: "Times New Roman", Times, serif;
   display: none;
-  background: linear-gradient(to right, #19dfe0 0%, #fd00ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #d0342c;
 }
