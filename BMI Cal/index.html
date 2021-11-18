@@ -21,14 +21,14 @@
           <input
             type="text"
             id="weightValue"
-            name="weightValue"
+            name="weight"
             placeholder="weight"
           /><br />
           <label for="heightValue">nhập chiều cao(cm)</label><br />
           <input
             type="text"
             id="heightValue"
-            name="heightValue"
+            name="height"
             placeholder="height"
           /><br /><br />
           <input onclick="BMICal()" id="btn" type="button" value="Submit" />
@@ -48,21 +48,24 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      let weightValue = $("#weightValue").val;
-      let heightValue = $("#heightValue").val;
       let result;
       let advise;
       function BMICal() {
-        result = weightValue / Math.sqrt(heightValue);
+        let weightValue = $("#weightValue").val();
+        let heightValue = $("#heightValue").val() / 100;
+        result = weightValue / (heightValue * 2);
+        console.log(result);
         if (result < 18.5) {
           advise = "gầy!";
           $("#result").html(`${advise}`);
-        }
-        if (result < 25) {
+        } else if (result < 25) {
           advise = "tốt !";
           $("#result").html(`${advise}`);
-        } else {
+        } else if (result >= 25) {
           advise = "béo quá !";
+          $("#result").html(`${advise}`);
+        } else {
+          advise = "nhập hẳn hoi vào!";
           $("#result").html(`${advise}`);
         }
       }
