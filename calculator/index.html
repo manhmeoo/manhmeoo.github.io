@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALCULATOR</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-calculator">
+        <div class="text-center">
+          <p id="title">CALCULATOR</p>
+        </div>
+        <div class="text-center">
+          <input
+            class="text-right textBox"
+            type="textBox"
+            placeholder="0"
+            readonly
+          />
+        </div>
+        <div id="buttons">
+          <ul style="list-style-type: none">
+            <li>
+              <button class="btn text-center" value="C">C</button>
+              <button class="btn text-center" value="CE">CE</button>
+              <button class="btn text-center" value="%">%</button>
+              <button class="btn text-center" value="/">/</button>
+            </li>
+            <li>
+              <button class="btn text-center" value="7">7</button>
+              <button class="btn text-center" value="8">8</button>
+              <button class="btn text-center" value="9">9</button>
+              <button class="btn text-center" value="*">*</button>
+            </li>
+            <li>
+              <button class="btn text-center" value="4">4</button>
+              <button class="btn text-center" value="5">5</button>
+              <button class="btn text-center" value="6">6</button>
+              <button class="btn text-center" value="-">-</button>
+            </li>
+            <li>
+              <button class="btn text-center" value="1">1</button>
+              <button class="btn text-center" value="2">2</button>
+              <button class="btn text-center" value="3">3</button>
+              <button class="btn text-center" value="+">+</button>
+            </li>
+            <li>
+              <button class="btn text-center" value=".">.</button>
+              <button class="btn text-center" value="0">0</button>
+              <button class="btn text-center" value="+/-">+/-</button>
+              <button class="btn text-center" value="=">=</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let clear = false;
+      let result = "";
+      let calc = "";
+
+      $(document).ready(function () {
+        $("button").click(function () {
+          let text = $(this).attr("value");
+          if (
+            parseInt(text, 10) == text ||
+            text === "%" ||
+            text === "/" ||
+            text === "*" ||
+            text === "-" ||
+            text === "+" ||
+            text === "."
+          ) {
+            if (clear === false) {
+              calc += text;
+              $(".textBox").val(calc);
+            } else {
+              calc = text;
+              $(".textBox").val(calc);
+              clear = false;
+            }
+          }
+
+          switch (text) {
+            case "C":
+              calc = "";
+              $(".textBox").val("");
+              break;
+
+            case "CE":
+              calc = calc.slice(0, -1);
+              $(".textBox").val(calc);
+              break;
+
+            case "=":
+              result = eval(calc);
+              $(".textBox").val(result);
+              clear = true;
+              break;
+
+            case "+/-":
+              if (clear === false) {
+                calc = calc * -1;
+                $(".textBox").val(calc);
+              } else {
+                result = result * -1;
+                $(".textBox").val(result);
+              }
+              break;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

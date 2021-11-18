@@ -1,0 +1,57 @@
+html,
+body {
+  margin: 0;
+  background-color: rgb(236, 236, 236);
+}
+
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container-calculator {
+  justify-self: center;
+  align-self: center;
+  width: 320px;
+  background-color: hsl(313, 62%, 55%);
+  border-radius: 30px;
+  box-shadow: 10px 10px 3px grey;
+}
+
+.text-center {
+  color: white;
+}
+
+#title {
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.textBox {
+  width: 250px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.btn {
+  width: 60px;
+  height: 50px;
+  margin-top: 5px;
+  background-color: white;
+  color: black;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
