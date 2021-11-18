@@ -17,16 +17,23 @@
     <div class="container-fluid">
       <div class="container BMI-container">
         <form class="BMI-content">
-            <label for="weightValue">nhập cân nặng(kg)</label>
-            <input type="text" id="weightValue" placeholder="weight"></input>
-            <br>
-            <label for="heightValue">nhập chiều cao(cm)</label>
-            <input type="text" id="heightValue" placeholder="height"></input>
-            <br>
-            <label id="btn" for="btn"></label>
-            <button onclick="BMICal()" id="btn" type="button">chốt</button>
-            <br>
-            <p id="result"></p>
+          <label for="weightValue">nhập cân nặng(kg)</label><br />
+          <input
+            type="text"
+            id="weightValue"
+            name="weightValue"
+            placeholder="weight"
+          /><br />
+          <label for="heightValue">nhập chiều cao(cm)</label><br />
+          <input
+            type="text"
+            id="heightValue"
+            name="heightValue"
+            placeholder="height"
+          /><br /><br />
+          <input onclick="BMICal()" id="btn" type="button" value="Submit" />
+          <br />
+          <p id="result"></p>
         </form>
       </div>
     </div>
@@ -41,21 +48,24 @@
       crossorigin="anonymous"
     ></script>
     <script>
-        let weightValue = $('#weightValue').val
-        let heightValue = $('#heightValue').val
-        let result;
-        let advise;
-        function BMICal (){
-            result = weightValue / Math.sqrt(heightValue)
-            
-                advise="đm"
-                $('#result').html ("advise") ;
-           
-
-
-
+      let weightValue = $("#weightValue").val;
+      let heightValue = $("#heightValue").val;
+      let result;
+      let advise;
+      function BMICal() {
+        result = weightValue / Math.sqrt(heightValue);
+        if (result < 18.5) {
+          advise = "gầy!";
+          $("#result").html(`${advise}`);
         }
-
+        if (result < 25) {
+          advise = "tốt !";
+          $("#result").html(`${advise}`);
+        } else {
+          advise = "béo quá !";
+          $("#result").html(`${advise}`);
+        }
+      }
     </script>
   </body>
 </html>

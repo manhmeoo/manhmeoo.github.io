@@ -22,3 +22,8 @@ body {
 .BMI-content > input {
   width: 80%;
 }
+
+#result {
+  color: red;
+  font-size: larger;
+}
