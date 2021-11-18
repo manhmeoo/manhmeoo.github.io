@@ -53,19 +53,19 @@
       function BMICal() {
         let weightValue = $("#weightValue").val();
         let heightValue = $("#heightValue").val() / 100;
-        result = weightValue / (heightValue * 2);
+        result = weightValue / (heightValue * heightValue);
         console.log(result);
         if (result < 18.5) {
-          advise = "gầy!";
+          advise = `chỉ số BMI của bạn là: ${result} => gầy!`;
           $("#result").html(`${advise}`);
         } else if (result < 25) {
-          advise = "tốt !";
+          advise = `chỉ số BMI của bạn là: ${result} => tốt!`;
           $("#result").html(`${advise}`);
         } else if (result >= 25) {
-          advise = "béo quá !";
+          advise = `chỉ số BMI của bạn là: ${result} => béo!`;
           $("#result").html(`${advise}`);
         } else {
-          advise = "nhập hẳn hoi vào!";
+          advise = "nhập hẳn hoi số vào!";
           $("#result").html(`${advise}`);
           console.log(result);
         }
