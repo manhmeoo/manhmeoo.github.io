@@ -15,11 +15,22 @@
   </head>
   <body>
     <div class="container-fluid bg img-fluid">
+      <div class="overlay-text visible">click to start</div>
+      <div id="gameOverText" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">CLICK TO RESTART</span>
+      </div>
+      <div id="victoryText" class="overlay-text">
+        VICTORY<span class="overlay-text-small">CLICK TO RESTART</span>
+      </div>
       <div class="info-container">
-        <div class="time-remaining"></div>
+        <div class="time-remaining">
+          time: <span id="time-remaining">100</span>
+        </div>
+        <div class="fliped">flip:0</div>
       </div>
       <div class="game-container">
-        <div class="valo-card">
+        <div class="valo-card" data-value="Reyna">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Reyna.jpeg" />
           </div>
@@ -27,7 +38,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Astra">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Astra.png" />
           </div>
@@ -35,7 +46,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Breach">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Breach.jpeg" />
           </div>
@@ -43,7 +54,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Brimstone">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Brimstone.jpeg" />
           </div>
@@ -51,7 +62,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Cypher">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Cypher.jpeg" />
           </div>
@@ -59,7 +70,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Jett">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Jett.jpeg" />
           </div>
@@ -67,7 +78,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="KAYO">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT KAYO.png" />
           </div>
@@ -75,7 +86,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Killjoy">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Killjoy.jpeg" />
           </div>
@@ -83,7 +94,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Omen">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Omen.jpeg" />
           </div>
@@ -91,7 +102,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Raze">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Raze.jpeg" />
           </div>
@@ -99,7 +110,7 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Sova">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Sova.jpeg" />
           </div>
@@ -107,7 +118,103 @@
             <img class="img-fluid" src="assets/imgs/backface.png" />
           </div>
         </div>
-        <div class="valo-card">
+        <div class="valo-card" data-value="Yoru">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Yoru.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Reyna">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Reyna.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Astra">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Astra.png" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Breach">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Breach.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Brimstone">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Brimstone.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Cypher">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Cypher.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Jett">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Jett.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="KAYO">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT KAYO.png" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Killjoy">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Killjoy.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Omen">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Omen.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Raze">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Raze.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Sova">
+          <div class="front">
+            <img class="img-fluid" src="assets/imgs/VALORANT Sova.jpeg" />
+          </div>
+          <div class="back">
+            <img class="img-fluid" src="assets/imgs/backface.png" />
+          </div>
+        </div>
+        <div class="valo-card" data-value="Yoru">
           <div class="front">
             <img class="img-fluid" src="assets/imgs/VALORANT Yoru.jpeg" />
           </div>
@@ -116,6 +223,30 @@
           </div>
         </div>
       </div>
+      <audio id="welcome-Music">
+        <source src="assets\audios\WelcomeRift.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="bgMusic">
+        <source src="assets\audios\battle.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="victoryMucsic">
+        <source src="assets\audios\Victory.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="defeatMucsic">
+        <source src="assets\audios\Defeat.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="flipMusic">
+        <source
+          src="assets\audios\Card-flip-sound-effect.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+      <audio id="success">
+        <source
+          src="assets\audios\success-sound-effect.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
     </div>
 
     <script
@@ -131,5 +262,6 @@
     <script>
       console.log($(".game-container"));
     </script>
+    <script src="main.js"></script>
   </body>
 </html>
