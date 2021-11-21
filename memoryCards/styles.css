@@ -1,0 +1,81 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(assets/fonts/Black_Ops_One/BlackOpsOne-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.bg {
+  /* The image used */
+  background-image: url(assets/imgs/background.jpeg);
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-container {
+  font-family: myFirstFont, Arial, sans-serif;
+  color: rgb(196, 19, 19);
+  font-size: xx-large;
+}
+
+.game-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+}
+
+.front {
+  overflow: hidden;
+  transform: rotateY(180deg);
+}
+
+.back {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front img,
+.back img {
+  max-width: 80%;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: all 0.5s;
+  max-width: 80%;
+}
+
+.valo-card {
+  position: relative;
+}
+
+.valo-card:hover .back {
+  transform: rotateY(180deg);
+}
+
+.valo-card:hover .front {
+  transform: rotateY(0deg);
+}
