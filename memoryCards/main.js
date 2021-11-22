@@ -93,7 +93,7 @@ cards.forEach((card) => {
   card.addEventListener("click", flipCard);
 });
 
-function countTime(timeleft, flipedNum) {
+function countTime(timeleft) {
   let realTime = document.getElementById("time-remaining");
   let downloadTimer = setInterval(function () {
     if (timeleft <= 0) {
@@ -102,8 +102,6 @@ function countTime(timeleft, flipedNum) {
       stopMp3(bgMusic);
       playMp3(defeatMucsic);
       overlays[1].classList.add("visible");
-    } else if (flipedNum.innerHTML == "done") {
-      timeleft == 0;
     } else {
       realTime.innerHTML = timeleft;
     }
