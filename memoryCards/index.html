@@ -25,9 +25,11 @@
       </div>
       <div class="info-container">
         <div class="time-remaining">
-          time: <span id="time-remaining">100</span>
+          time: <span id="time-remaining"></span>
         </div>
-        <div class="fliped">flip:0</div>
+        <div class="fliped">
+          flip: <span data-status="not done" id="flipedCardsNum">0</span>
+        </div>
       </div>
       <div class="game-container">
         <div class="valo-card" data-value="Reyna">
@@ -223,7 +225,7 @@
           </div>
         </div>
       </div>
-      <audio id="welcome-Music">
+      <audio id="welcomeMusic">
         <source src="assets\audios\WelcomeRift.mp3" type="audio/mpeg" />
       </audio>
       <audio id="bgMusic">
@@ -261,6 +263,13 @@
     ></script>
     <script>
       console.log($(".game-container"));
+    </script>
+    <script>
+      function reloadJs(src) {
+        src = $('script[src$="' + src + '"]').attr("src");
+        $('script[src$="' + src + '"]').remove();
+        $("<script/>").attr("src", src).appendTo("head");
+      }
     </script>
     <script src="main.js"></script>
   </body>
