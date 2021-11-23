@@ -453,6 +453,31 @@ a {
   display: none;
 }
 
+/* collection */
+.grid {
+  margin-top: 100px;
+}
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: calc(100% / 3);
+  box-shadow: rgba(49, 49, 184, 0.25) 0px 50px 100px -20px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+
 /*Ipad dọc(768 x 1024)*/
 @media screen and (max-width: 1000px) {
   .product-container {
