@@ -505,7 +505,21 @@ a {
   transition: all 1s;
 }
 
-.grid img {
+.grid-item:hover .collection-imgs {
+  transform: scale(1.25);
+  border: none;
+}
+
+.grid-item:hover {
+  border: none;
+  margin: 50px;
+}
+
+.grid-item:hover .collection-content {
+  display: none;
+}
+
+.collection-imgs {
   max-width: 100%;
   border: solid 2px;
   border-bottom-color: #ffe;
