@@ -449,10 +449,6 @@ a {
   color: #2a2a2a;
 }
 
-.swiper-top {
-  display: none;
-}
-
 /* collection */
 .collection-container {
   width: 90%;
@@ -550,12 +546,7 @@ a {
     display: flex;
     justify-content: center;
   }
-  .swiper-top {
-    display: flex;
-  }
-  .mySwiper {
-    display: none;
-  }
+
   .collection-container {
     width: 95%;
   }
@@ -606,13 +597,6 @@ a {
 
   .prices.before,
   .prices.center {
-    display: none;
-  }
-
-  .swiper-top {
-    display: flex;
-  }
-  .mySwiper {
     display: none;
   }
 
