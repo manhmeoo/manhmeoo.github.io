@@ -1,0 +1,22 @@
+.accordion1,
+.accordion2 {
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: solid black;
+  text-align: left;
+  font-size: larger;
+}
+
+.active,
+.accordion1:hover,
+.accordion2:hover {
+  background-color: #808080;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+}
