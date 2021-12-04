@@ -23,7 +23,38 @@
       <div class="row navbar">
         <div class="col-lg-3 col">
           <div class="navbar__dropDown">
-            <i class="fas fa-align-justify"></i>
+            <div style="align-self: flex-end; font-size: x-large">
+              <i class="fas fa-align-justify"></i>
+            </div>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Stores</a></li>
+              <hr />
+              <li>
+                <form class="form-inline my-2 my-lg-0 navbar__dropDown-search">
+                  <input
+                    class="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="
+                      btn btn-outline-success
+                      my-2 my-sm-0
+                      navbar__dropDown-search-Btn
+                    "
+                    type="button"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </form>
+              </li>
+            </ul>
+
+            <hr />
           </div>
           <div class="navbar__socialLink">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -33,31 +64,33 @@
           </div>
         </div>
         <div class="col-lg-6 col">
-          <div class="navbar__link">
-            <a href="#">About</a>
-            <a href="#">Categories</a>
-            <a class="navbar__link__home" href="index.html">Meo's Store</a>
-            <a href="#">Collections</a>
-            <a href="#">Stores</a>
-          </div>
+          <ul class="navbar__link">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Categories</a></li>
+            <li>
+              <a class="navbar__link__home" href="index.html">Meo's Store</a>
+            </li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Stores</a></li>
+          </ul>
         </div>
         <div class="col-lg-3 col">
-          <div class="navbar__userLink">
-            <div class="navbar__userLink-search">
+          <ul class="navbar__userLink">
+            <li class="navbar__userLink-search">
               <div class="search-container">
                 <form action="/action_page.php">
                   <input type="text" placeholder="Search.." name="search" />
-                  <button type="submit"><i class="fa fa-search"></i></button>
+                  <button type="button"><i class="fa fa-search"></i></button>
                 </form>
               </div>
-            </div>
-            <div>
+            </li>
+            <li>
               <i class="fas fa-user-circle"></i>
-            </div>
-            <div>
+            </li>
+            <li>
               <i class="fas fa-shopping-bag"></i>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -86,12 +119,9 @@
     </div>
     <!-- banner -->
     <!-- welcome section -->
-    <div class="container">
+    <div class="container welcome__container">
       <div class="row">
-        <div class="col">
-          <div>a</div>
-          <div>b</div>
-        </div>
+        <div class="col"></div>
         <div class="col"></div>
       </div>
     </div>
@@ -116,10 +146,10 @@
         spaceBetween: 30,
         centeredSlides: true,
         effect: "fade",
-        speed: 1500,
+        speed: 2000,
         loop: true,
         autoplay: {
-          delay: 2000,
+          delay: 3000,
           disableOnInteraction: false,
         },
         pagination: {
