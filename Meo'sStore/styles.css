@@ -28,7 +28,7 @@ body {
   padding: 0;
   background-color: #fff;
   overflow-x: hidden;
-  min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -43,11 +43,21 @@ a:hover {
 ul {
   list-style: none;
 }
+.container-fluid {
+  transition: all 1s;
+}
+
+.container-fluid[data-blur="true"] {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+}
 
 /* navbar */
 .navbar__container {
   height: 100px;
   width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
 }
 
 .navbar {
@@ -71,7 +81,7 @@ ul {
   align-items: flex-start;
   flex-direction: column;
   position: fixed;
-  inset: 0 55% 0 0;
+  inset: 0 45% 0 0;
   background: #fbf5f3;
   z-index: 100;
   gap: 5rem;
@@ -113,7 +123,7 @@ ul {
 
 .navbar__cart {
   position: fixed;
-  inset: 0 0 0 50%;
+  inset: 0 0 0 45%;
   background: #fbf5f3;
   z-index: 100;
   transition: all 1s;
@@ -324,7 +334,6 @@ ul {
 
   .navbar__cart {
     inset: 0 0 0 75%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
   }
 
   .navbar__cartToggle_expanded {

@@ -18,8 +18,45 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- cart and dropdownMenu -->
+    <div class="navbar__cart" data-visible="false" id="navbar__cart">
+      <button
+        class="navbar__cartToggle_expanded"
+        type="button"
+        aria-controls="navbar__cart"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div data-visible="false" id="navbar__dropDown" class="navbar__dropDown">
+      <button
+        class="navbar__expandmenu__mobileToggle"
+        type="button"
+        aria-controls="navbar__dropDown"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Stores</a></li>
+        <li>
+          <hr />
+          <form class="form-inline my-2 my-lg-0 navbar__dropDown-search">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </li>
+      </ul>
+    </div>
+    <!-- cart and dropdownMenu -->
     <!-- navbar -->
-    <div class="navbar__container container-fluid">
+    <div class="navbar__container container-fluid" data-blur="false">
       <div class="row navbar">
         <div class="col-lg-3 col">
           <button
@@ -30,36 +67,7 @@
           >
             <i class="fas fa-bars"></i>
           </button>
-          <div
-            data-visible="false"
-            id="navbar__dropDown"
-            class="navbar__dropDown"
-          >
-            <button
-              class="navbar__expandmenu__mobileToggle"
-              type="button"
-              aria-controls="navbar__dropDown"
-            >
-              <i class="fas fa-times"></i>
-            </button>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Categories</a></li>
-              <li><a href="#">Collections</a></li>
-              <li><a href="#">Stores</a></li>
-              <li>
-                <hr />
-                <form class="form-inline my-2 my-lg-0 navbar__dropDown-search">
-                  <input
-                    class="form-control mr-sm-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                </form>
-              </li>
-            </ul>
-          </div>
+
           <div class="navbar__socialLink">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -97,50 +105,36 @@
               <i class="fas fa-shopping-bag"></i>
             </li>
           </ul>
-          <div class="navbar__cart" data-visible="false" id="navbar__cart">
-            <button
-              class="navbar__cartToggle_expanded"
-              type="button"
-              aria-controls="navbar__cart"
-            >
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
         </div>
       </div>
-    </div>
-    <!-- navbar -->
-    <!-- banner -->
-    <div class="banner">
-      <div class="swiper bannerSwipper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="assets/imgs/banner3.jpg" />
+      <!-- navbar -->
+      <!-- banner -->
+      <div class="banner">
+        <div class="swiper bannerSwipper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/imgs/banner3.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/imgs/banner1.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/imgs/banner4.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/imgs/banner2.jpg" />
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="assets/imgs/banner1.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/imgs/banner4.jpg" />
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/imgs/banner2.jpg" />
-          </div>
+          <div class="banner__swiper-button-next swiper-button-next"></div>
+          <div class="banner__swiper-button-prev swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="banner__swiper-button-next swiper-button-next"></div>
-        <div class="banner__swiper-button-prev swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
       </div>
+      <!-- banner -->
+      <!-- welcome section -->
+
+      <!-- welcome section -->
     </div>
-    <!-- banner -->
-    <!-- welcome section -->
-    <div class="container welcome__container">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-      </div>
-    </div>
-    <!-- welcome section -->
     <script
       src="https://kit.fontawesome.com/d37a3bbe69.js"
       crossorigin="anonymous"
@@ -185,35 +179,39 @@
       const navExpandMobileToggle = document.querySelector(
         ".navbar__expandmenu__mobileToggle"
       );
-
-      navMobileToggle.addEventListener("click", () => {
-        // const visibility = navDropDown.getAttribute("data-visible");
-        navDropDown.setAttribute("data-visible", true);
-        navMobileToggle.setAttribute("aria-expanded", true);
-      });
-
-      navExpandMobileToggle.addEventListener("click", () => {
-        navDropDown.setAttribute("data-visible", false);
-        navMobileToggle.setAttribute("aria-expanded", false);
-      });
-
-      //navbar cart controller
       const navbarCart = document.querySelector(".navbar__cart");
       const navbarCartToggle = document.querySelector(".navbar__cartToggle");
 
       const navbarCartToggleExpanded = document.querySelector(
         ".navbar__cartToggle_expanded"
       );
+      const blurPage = document.querySelector(".container-fluid");
+
+      navMobileToggle.addEventListener("click", () => {
+        // const visibility = navDropDown.getAttribute("data-visible");
+        navDropDown.setAttribute("data-visible", true);
+        navMobileToggle.setAttribute("aria-expanded", true);
+        blurPage.setAttribute("data-blur", true);
+      });
+
+      navExpandMobileToggle.addEventListener("click", () => {
+        navDropDown.setAttribute("data-visible", false);
+        navMobileToggle.setAttribute("aria-expanded", false);
+        blurPage.setAttribute("data-blur", false);
+      });
+
+      //navbar cart controller
+
       navbarCartToggle.addEventListener("click", () => {
-        const visibility = navbarCart.getAttribute("data-visible");
-        console.log(visibility);
         navbarCart.setAttribute("data-visible", true);
         navbarCartToggle.setAttribute("aria-expanded", true);
+        blurPage.setAttribute("data-blur", true);
       });
 
       navbarCartToggleExpanded.addEventListener("click", () => {
         navbarCart.setAttribute("data-visible", false);
         navbarCartToggle.setAttribute("aria-expanded", false);
+        blurPage.setAttribute("data-blur", false);
       });
     </script>
   </body>
