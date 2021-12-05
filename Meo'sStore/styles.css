@@ -48,7 +48,7 @@ ul {
 }
 
 .container-fluid[data-blur="true"] {
-  filter: blur(10px);
+  filter: blur(5px);
   pointer-events: none;
   user-select: none;
 }
@@ -280,6 +280,7 @@ ul {
 
 .banner__swiper-button-next::after,
 .banner__swiper-button-prev::after {
+  display: none;
   color: #212529;
   font-size: 30px;
   opacity: 0.5;
@@ -342,6 +343,11 @@ ul {
 
   .navbar__cartToggle {
     margin-right: 30px;
+  }
+
+  .banner__swiper-button-next::after,
+  .banner__swiper-button-prev::after {
+    display: block;
   }
 }
 /* responsive */
