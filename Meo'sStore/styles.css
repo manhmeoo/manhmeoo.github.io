@@ -27,6 +27,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 a {
@@ -63,16 +65,75 @@ ul {
 }
 
 .navbar__dropDown {
-  padding-top: 10px;
+  padding-top: 5rem;
   padding-right: 10px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   position: fixed;
-  inset: 0 60% 0 0;
+  inset: 0 55% 0 0;
   background: #fbf5f3;
   z-index: 100;
   gap: 5rem;
+  transition: all 0.8s;
+  transform: translateX(-100%);
+}
+
+.navbar__mobileToggle {
+  position: absolute;
+  width: 3rem;
+  aspect-ratio: 1;
+  border: none;
+  background: inherit;
+  top: 25%;
+  left: 0;
+  z-index: 9999;
+  font-size: 20px;
+  display: block;
+}
+
+.navbar__dropDown[data-visible="true"] {
+  transform: translateX(0%);
+}
+
+.navbar__mobileToggle[aria-expanded="true"] {
+  display: none;
+}
+
+.navbar__expandmenu__mobileToggle {
+  width: 3rem;
+  aspect-ratio: 1;
+  border: none;
+  background: inherit;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.navbar__cart {
+  position: fixed;
+  inset: 0 0 0 50%;
+  background: #fbf5f3;
+  z-index: 100;
+  transition: all 1s;
+  transform: translateX(100%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
+}
+
+.navbar__cart[data-visible="true"] {
+  transform: translateY(0%);
+}
+
+.navbar__cartToggle_expanded {
+  width: 3rem;
+  aspect-ratio: 1;
+  border: none;
+  background: inherit;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 10px;
 }
 
 .navbar__dropDown ul {
@@ -92,7 +153,7 @@ ul {
 }
 
 .form-control:focus {
-  color: ##212529;
+  color: #212529;
   background-color: #fff;
   border-color: #fdeae3;
   outline: 0;
@@ -177,6 +238,7 @@ ul {
 
 .swiper {
   width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
 }
 
 .swiper-slide {
@@ -254,6 +316,23 @@ ul {
   }
   .swiper-slide img {
     max-height: 830px;
+  }
+
+  .navbar__mobileToggle {
+    display: none;
+  }
+
+  .navbar__cart {
+    inset: 0 0 0 75%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
+  }
+
+  .navbar__cartToggle_expanded {
+    font-size: 30px;
+  }
+
+  .navbar__cartToggle {
+    margin-right: 30px;
   }
 }
 /* responsive */

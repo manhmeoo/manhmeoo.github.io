@@ -22,10 +22,26 @@
     <div class="navbar__container container-fluid">
       <div class="row navbar">
         <div class="col-lg-3 col">
-          <div class="navbar__dropDown">
-            <div style="align-self: flex-end; font-size: x-large">
-              <i class="fas fa-align-justify"></i>
-            </div>
+          <button
+            class="navbar__mobileToggle"
+            type="button"
+            aria-controls="navbar__dropDown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div
+            data-visible="false"
+            id="navbar__dropDown"
+            class="navbar__dropDown"
+          >
+            <button
+              class="navbar__expandmenu__mobileToggle"
+              type="button"
+              aria-controls="navbar__dropDown"
+            >
+              <i class="fas fa-times"></i>
+            </button>
             <ul>
               <li><a href="#">About</a></li>
               <li><a href="#">Categories</a></li>
@@ -43,8 +59,6 @@
                 </form>
               </li>
             </ul>
-
-            <hr />
           </div>
           <div class="navbar__socialLink">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -74,13 +88,24 @@
                 </form>
               </div>
             </li>
-            <li>
-              <i class="fas fa-user-circle"></i>
-            </li>
-            <li>
+            <li
+              class="navbar__cartToggle"
+              type="button"
+              aria-controls="navbar__cart"
+              aria-expanded="false"
+            >
               <i class="fas fa-shopping-bag"></i>
             </li>
           </ul>
+          <div class="navbar__cart" data-visible="false" id="navbar__cart">
+            <button
+              class="navbar__cartToggle_expanded"
+              type="button"
+              aria-controls="navbar__cart"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -132,6 +157,7 @@
     ></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script>
+      // banner controller
       let swiper = new Swiper(".bannerSwipper", {
         spaceBetween: 30,
         centeredSlides: true,
@@ -150,6 +176,44 @@
           nextEl: ".banner__swiper-button-next",
           prevEl: ".banner__swiper-button-prev",
         },
+      });
+    </script>
+    <script>
+      // navbar menu controller
+      const navDropDown = document.querySelector("#navbar__dropDown");
+      const navMobileToggle = document.querySelector(".navbar__mobileToggle");
+      const navExpandMobileToggle = document.querySelector(
+        ".navbar__expandmenu__mobileToggle"
+      );
+
+      navMobileToggle.addEventListener("click", () => {
+        // const visibility = navDropDown.getAttribute("data-visible");
+        navDropDown.setAttribute("data-visible", true);
+        navMobileToggle.setAttribute("aria-expanded", true);
+      });
+
+      navExpandMobileToggle.addEventListener("click", () => {
+        navDropDown.setAttribute("data-visible", false);
+        navMobileToggle.setAttribute("aria-expanded", false);
+      });
+
+      //navbar cart controller
+      const navbarCart = document.querySelector(".navbar__cart");
+      const navbarCartToggle = document.querySelector(".navbar__cartToggle");
+
+      const navbarCartToggleExpanded = document.querySelector(
+        ".navbar__cartToggle_expanded"
+      );
+      navbarCartToggle.addEventListener("click", () => {
+        const visibility = navbarCart.getAttribute("data-visible");
+        console.log(visibility);
+        navbarCart.setAttribute("data-visible", true);
+        navbarCartToggle.setAttribute("aria-expanded", true);
+      });
+
+      navbarCartToggleExpanded.addEventListener("click", () => {
+        navbarCart.setAttribute("data-visible", false);
+        navbarCartToggle.setAttribute("aria-expanded", false);
       });
     </script>
   </body>
