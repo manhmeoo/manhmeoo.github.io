@@ -38,9 +38,9 @@
       </button>
       <ul>
         <li><a href="#">About</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Collections</a></li>
         <li><a href="#">Stores</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Blogs</a></li>
         <li>
           <hr />
           <form class="form-inline my-2 my-lg-0 navbar__dropDown-search">
@@ -56,55 +56,57 @@
     </div>
     <!-- cart and dropdownMenu -->
     <!-- navbar -->
-    <div class="navbar__container container-fluid" data-blur="false">
-      <div class="row navbar">
-        <div class="col-lg-3 col">
-          <button
-            class="navbar__mobileToggle"
-            type="button"
-            aria-controls="navbar__dropDown"
-            aria-expanded="false"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-
-          <div class="navbar__socialLink">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-discord"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-6 col">
-          <ul class="navbar__link">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Categories</a></li>
-            <li>
-              <a class="navbar__link__home" href="index.html">Meo's Store</a>
-            </li>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Stores</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col">
-          <ul class="navbar__userLink">
-            <li class="navbar__userLink-search">
-              <div class="search-container">
-                <form action="/action_page.php">
-                  <input type="text" placeholder="Search.." name="search" />
-                  <button type="button"><i class="fa fa-search"></i></button>
-                </form>
-              </div>
-            </li>
-            <li
-              class="navbar__cartToggle"
+    <div class="body-container" data-blur="false">
+      <div class="navbar__container container-fluid">
+        <div class="row navbar">
+          <div class="col-lg-3 col">
+            <button
+              class="navbar__mobileToggle"
               type="button"
-              aria-controls="navbar__cart"
+              aria-controls="navbar__dropDown"
               aria-expanded="false"
             >
-              <i class="fas fa-shopping-bag"></i>
-            </li>
-          </ul>
+              <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="navbar__socialLink">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-discord"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-6 col">
+            <ul class="navbar__link">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Stores</a></li>
+              <li>
+                <a class="navbar__link__home" href="index.html">Meo's Store</a>
+              </li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col">
+            <ul class="navbar__userLink">
+              <li class="navbar__userLink-search">
+                <div class="search-container">
+                  <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search" />
+                    <button type="button"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </li>
+              <li
+                class="navbar__cartToggle"
+                type="button"
+                aria-controls="navbar__cart"
+                aria-expanded="false"
+              >
+                <i class="fas fa-shopping-bag"></i>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <!-- navbar -->
@@ -132,8 +134,89 @@
       </div>
       <!-- banner -->
       <!-- welcome section -->
-
+      <div class="welcome__background">
+        <div class="container">
+          <div class="welcome__titleContainer">
+            <h2 class="welcome__title-large">TITLE</h2>
+            <hr style="width: 10%; height: 2px; color: red" />
+            <div class="welcome__title-small">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
+              rem dolore recusandae delectus architecto ex eveniet accusamus,
+              hic at voluptatibus vero possimus.
+            </div>
+          </div>
+          <div class="row welcome__content">
+            <div class="col-lg-4 welcome-imgContainer">
+              <img class="img-fluid" src="assets/imgs/welcome1.jpg" />
+              <div class="welcomeContent__imgOverlay">
+                <div type="button" class="welcome__content-btn">
+                  VIEW DETAILS
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="welcome__content-container">
+                <div class="welcome__content-details">
+                  <div class="welcome__content-title">Title</div>
+                  <div class="welcome__contents">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                  <div type="button" class="welcome__content-btn">
+                    VIEW DETAILS
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 welcome-imgContainer">
+              <img class="img-fluid" src="assets/imgs/welcome2.jpg" />
+              <div class="welcomeContent__imgOverlay">
+                <div type="button" class="welcome__content-btn">
+                  VIEW DETAILS
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="welcome__content-container">
+                <div class="welcome__content-details">
+                  <div class="welcome__content-title">Title</div>
+                  <div class="welcome__contents">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Delectus, fugiat autem.
+                  </div>
+                  <div type="button" class="welcome__content-btn">
+                    VIEW DETAILS
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 welcome-imgContainer">
+              <img class="img-fluid" src="assets/imgs/welcome3.jpg" />
+              <div class="welcomeContent__imgOverlay">
+                <div type="button" class="welcome__content-btn">
+                  VIEW DETAILS
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="welcome__content-container">
+                <div class="welcome__content-details">
+                  <div class="welcome__content-title">Title</div>
+                  <div class="welcome__contents">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  </div>
+                  <div type="button" class="welcome__content-btn">
+                    VIEW DETAILS
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- welcome section -->
+      <!-- About US -->
+
+      <!-- About US -->
     </div>
     <script
       src="https://kit.fontawesome.com/d37a3bbe69.js"
@@ -185,7 +268,7 @@
       const navbarCartToggleExpanded = document.querySelector(
         ".navbar__cartToggle_expanded"
       );
-      const blurPage = document.querySelector(".container-fluid");
+      const blurPage = document.querySelector(".body-container");
 
       navMobileToggle.addEventListener("click", () => {
         // const visibility = navDropDown.getAttribute("data-visible");
