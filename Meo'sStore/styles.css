@@ -402,6 +402,24 @@ ul {
   background-color: #e0ab97;
 }
 /* welcome section */
+/* about section */
+.aboutSection {
+  background: linear-gradient(#fbf5f3, #fff);
+  height: 950px;
+  overflow: hidden;
+}
+.aboutSection__leftContents {
+  overflow: hidden;
+}
+
+.aboutSection__leftContents img {
+  object-fit: cover;
+  max-height: 900px;
+  width: 100%;
+}
+
+/* about section */
+
 /* responsive */
 @media (min-width: 1025px) {
   .navbar__socialLink {
