@@ -1,26 +1,23 @@
+/* font for logo */
 @font-face {
-  font-family: autumn;
-  src: url(assets/fonts/Autumn.ttf);
+  font-family: Madina;
+  src: url(assets/fonts/Madina.ttf);
+}
+/* font for logo */
+
+@font-face {
+  font-family: pompiere;
+  src: url(assets/fonts/Pompiere-Regular.ttf);
 }
 
 @font-face {
-  font-family: creation;
-  src: url(assets/fonts/CreattionFont.otf);
-}
-
-@font-face {
-  font-family: elsie;
-  src: url(assets/fonts/Elsie-Regular.otf);
-}
-
-@font-face {
-  font-family: greatVibes;
-  src: url(assets/fonts/GreatVibes-Regular.ttf);
+  font-family: SoftElegance;
+  src: url(assets/fonts/SoftElegance.ttf);
 }
 
 * {
   box-sizing: border-box;
-  font-family: elsie;
+  font-family: SoftElegance;
 }
 
 body {
@@ -127,7 +124,7 @@ ul {
   inset: 0 0 0 45%;
   background: #fbf5f3;
   z-index: 100;
-  transition: all 1s;
+  transition: all 0.75s;
   transform: translateX(100%);
 }
 
@@ -200,7 +197,7 @@ ul {
 .navbar__link__home {
   color: #212529;
   font-size: 30px;
-  font-family: creation;
+  font-family: Madina;
   font-weight: bolder;
 }
 
@@ -346,7 +343,8 @@ ul {
 }
 .welcome-content-paragraph {
   margin-top: 5px;
-  font-size: small;
+  font-size: medium;
+  font-family: pompiere;
 }
 .welcome-content-button {
   margin-top: 1rem;
@@ -407,6 +405,22 @@ ul {
   align-items: flex-start;
 }
 
+.aboutSection__rightContents h5 {
+  font-size: larger;
+}
+
+.aboutSection__rightContents h2 {
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.aboutSection__rightContents p {
+  font-family: pompiere;
+  font-size: large;
+  font-weight: 500;
+}
+
 .rightContentsBtn {
   align-self: flex-end;
   transition: all 0.5s;
@@ -414,10 +428,12 @@ ul {
 
 .rightContentsBtn a {
   transition: all 0.5s;
+  color: #eccbbe;
+  font-weight: bolder;
 }
 
 .rightContentsBtn:hover a {
-  color: #eccbbe;
+  color: #e0ab97;
   text-decoration: underline;
 }
 
@@ -536,9 +552,8 @@ ul {
 .Products__details .card-text {
   align-self: center;
   display: flex;
-  justify-content: space-between;
-  width: 60%;
-  margin: auto;
+  justify-content: center;
+  flex-wrap: nowrap;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -576,7 +591,7 @@ ul {
 
 .price {
   font-size: larger;
-  font-family: greatVibes;
+  font-family: pompiere;
   color: #212529;
 }
 
@@ -710,8 +725,8 @@ ul {
 
 .img-rightContent-each:hover img,
 .img-leftContent:hover img {
-  filter: brightness(80%);
-  filter: blur(1px);
+  filter: brightness(75%);
+  transform: scale(1.05);
 }
 
 .img-rightContent-each {
