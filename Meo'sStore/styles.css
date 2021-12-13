@@ -15,6 +15,11 @@
   src: url(assets/fonts/SoftElegance.ttf);
 }
 
+@font-face {
+  font-family: commercial;
+  src: url(assets/fonts//Montserrat-Regular.ttf);
+}
+
 * {
   box-sizing: border-box;
   font-family: SoftElegance;
@@ -293,6 +298,78 @@ ul {
 .banner__swiper-button-prev:hover::after {
   font-size: 40px;
   opacity: 1;
+}
+
+.campain-details {
+  position: absolute;
+  animation: mymove 3s;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.campain-text {
+  font-family: commercial;
+}
+
+.campain-details .season {
+  color: #b45364;
+  font-size: 0.4em;
+  text-transform: uppercase;
+}
+
+.campain-details .main {
+  color: #212529;
+  font-size: 0.9em;
+  text-transform: capitalize;
+}
+
+.campain-details .sub {
+  color: #212529;
+  font-size: 0.4em;
+}
+
+.campain-text-btn {
+  margin-top: 10px;
+  border: none;
+  background-color: #eccbbe;
+  color: #fff;
+  /* width: 120px;
+  height: 50px; */
+  transition: all 0.5s;
+  font-size: 0.6em;
+}
+
+.campain2 {
+  animation: othermove 5s;
+  animation-iteration-count: 2;
+}
+
+.campain-text-btn:hover {
+  background-color: #e0ab97;
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+@keyframes othermove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 50%;
+  }
 }
 
 /* banner */
@@ -911,6 +988,34 @@ ul {
 
   .welcome-details img {
     max-height: 500px;
+  }
+
+  .campain-details {
+    left: 12.5%;
+  }
+
+  .campain-details .season {
+    color: #b45364;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .campain-details .main {
+    color: #212529;
+    font-size: 60px;
+    text-transform: capitalize;
+  }
+
+  .campain-details .sub {
+    color: #212529;
+    font-size: 18px;
+  }
+
+  .campain-text-btn {
+    margin-top: 20px;
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
   }
 
   .aboutSection__mainImg {

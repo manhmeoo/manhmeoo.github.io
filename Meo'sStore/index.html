@@ -120,16 +120,22 @@
         <div class="swiper bannerSwipper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="assets/imgs/banner3.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/imgs/banner1.jpg" />
+              <img src="assets/imgs/banner2.jpg" />
+              <div class="campain-details campain1">
+                <div class="campain-text season">New Arrivals</div>
+                <div class="campain-text main">New Collection</div>
+                <div class="campain-text sub">Up to 90% off on Accessories</div>
+                <button class="campain-text-btn">SHOP NOW</button>
+              </div>
             </div>
             <div class="swiper-slide">
               <img src="assets/imgs/banner4.jpg" />
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/imgs/banner2.jpg" />
+              <div class="campain-details campain2">
+                <div class="campain-text season">New Arrivals</div>
+                <div class="campain-text main">Designer Collection</div>
+                <div class="campain-text sub">Up to 90% off on Lipstick</div>
+                <button class="campain-text-btn">SHOP NOW</button>
+              </div>
             </div>
           </div>
           <div class="banner__swiper-button-next swiper-button-next"></div>
@@ -1190,11 +1196,10 @@
       var swiper = new Swiper(".bannerSwipper", {
         spaceBetween: 30,
         centeredSlides: true,
-        effect: "fade",
-        speed: 2000,
+        speed: 1000,
         loop: true,
         autoplay: {
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         },
         pagination: {
