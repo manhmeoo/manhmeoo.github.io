@@ -442,21 +442,16 @@ ul {
   filter: brightness(120%);
 }
 
+.welcome-right-top {
+  overflow: hidden;
+  position: relative;
+}
+
 .welcome-left img:hover {
   transform: scale(1.05);
 }
 
-.welcome-right-top div {
-  overflow: hidden;
-  margin-right: 10px;
-  display: none;
-}
-
-.welcome-right-top div:nth-child(2) {
-  margin-right: 0;
-}
-
-.welcome-right-top div:hover img {
+.welcome-right-top:hover img {
   transform: scale(1.05);
 }
 
@@ -480,17 +475,12 @@ ul {
   overflow: hidden;
 }
 
-.welcome-right-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .welcome-right-top .campain1 {
   position: absolute;
   animation: mymove 3s;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(30%, -50%);
   display: flex;
   padding: 0;
 }
@@ -1104,10 +1094,6 @@ ul {
 
   .welcome-right-top div {
     display: block;
-  }
-
-  .welcome-right {
-    grid-template-rows: 1fr 1fr;
   }
 
   .welcome-container .campain1 .campain-text {
