@@ -414,7 +414,6 @@ ul {
 /* welcome section */
 .welcome-container {
   display: grid;
-
   gap: 10px;
   margin-top: 10px;
 }
@@ -426,20 +425,30 @@ ul {
   transition: all 0.5s;
 }
 
-.welcome-container .campain1 .campain-text {
-  font-size: 13px;
+.welcome-container .campain1 {
+  top: 50%;
+  left: unset;
+  right: 5%;
+  transform: translateY(-50%);
+  position: absolute;
 }
 
-.welcome-container .campain1 .main {
-  font-size: 22px !important;
+.welcome-container .campain-details .main,
+.welcome-container .campain-details .sub {
+  color: #fff;
 }
 
-.welcome-container .campain-text-btn {
+.welcome-container .campain-details .season {
+  color: #e0ab97;
+}
+
+.welcome-right-top .campain-details .main,
+.welcome-right-top .campain-details .sub {
+  color: #212121;
+}
+
+.welcome-container .campain-details .main {
   font-size: 15px;
-}
-
-.welcome-left img {
-  filter: brightness(120%);
 }
 
 .welcome-right-top {
@@ -473,16 +482,6 @@ ul {
   display: grid;
   gap: 10px;
   overflow: hidden;
-}
-
-.welcome-right-top .campain1 {
-  position: absolute;
-  animation: mymove 3s;
-  left: 50%;
-  top: 50%;
-  transform: translate(30%, -50%);
-  display: flex;
-  padding: 0;
 }
 
 .welcome-right img {
@@ -1092,16 +1091,17 @@ ul {
     margin-top: 10px;
   }
 
-  .welcome-right-top div {
-    display: block;
+  .welcome-container .campain1 {
+    top: 50%;
+    left: unset;
+    right: 15%;
+    transform: translate(20%, -50%);
+    position: absolute;
+    max-width: 350px;
   }
 
-  .welcome-container .campain1 .campain-text {
-    font-size: 15px;
-  }
-
-  .welcome-container .campain1 .main {
-    font-size: 32px !important;
+  .welcome-container .campain-details .main {
+    font-size: 35px;
   }
 
   .welcome-slogan {
