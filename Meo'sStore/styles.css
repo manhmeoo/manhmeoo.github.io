@@ -378,8 +378,6 @@ ul {
   border: none;
   background-color: #eccbbe;
   color: #fff;
-  /* width: 120px;
-  height: 50px; */
   transition: all 0.5s;
   font-size: 0.6em;
 }
@@ -416,8 +414,7 @@ ul {
 /* welcome section */
 .welcome-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
+
   gap: 10px;
   margin-top: 10px;
 }
@@ -427,6 +424,18 @@ ul {
   height: 100%;
   object-fit: cover;
   transition: all 0.5s;
+}
+
+.welcome-container .campain1 .campain-text {
+  font-size: 13px;
+}
+
+.welcome-container .campain1 .main {
+  font-size: 22px !important;
+}
+
+.welcome-container .campain-text-btn {
+  font-size: 15px;
 }
 
 .welcome-left img {
@@ -440,6 +449,7 @@ ul {
 .welcome-right-top div {
   overflow: hidden;
   margin-right: 10px;
+  display: none;
 }
 
 .welcome-right-top div:nth-child(2) {
@@ -466,7 +476,6 @@ ul {
 
 .welcome-right {
   display: grid;
-  grid-template-rows: 1fr 1fr;
   gap: 10px;
   overflow: hidden;
 }
@@ -505,7 +514,7 @@ ul {
 }
 
 .welcome-slogan-details {
-  width: 100%;
+  width: 80%;
   height: 250px;
   margin: auto;
   display: flex;
@@ -527,7 +536,7 @@ ul {
 
 .welcome-slogan-details .slogan-sup {
   font-weight: lighter;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 /* welcome section */
@@ -1083,6 +1092,30 @@ ul {
 
   .swiper-slide {
     max-height: 750px;
+  }
+
+  .welcome-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .welcome-right-top div {
+    display: block;
+  }
+
+  .welcome-right {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .welcome-container .campain1 .campain-text {
+    font-size: 15px;
+  }
+
+  .welcome-container .campain1 .main {
+    font-size: 32px !important;
   }
 
   .welcome-slogan {
