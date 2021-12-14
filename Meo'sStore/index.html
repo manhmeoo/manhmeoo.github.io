@@ -23,8 +23,11 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <button onclick="topFunction()" id="toTopButton" title="Go to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
     <!-- navbar -->
-    <div>
+    <div style="padding: 0">
       <div class="nav-above">
         <div class="container">
           <div class="social-icons">
@@ -1104,7 +1107,6 @@
     </div>
     <!-- Products -->
     <!-- Categories -->
-
     <div class="container categories-section">
       <h2 class="categories-title">Shop By Categories</h2>
       <div class="indexCategories-container">
@@ -1298,64 +1300,26 @@
       });
     </script>
     <script>
-      const navDropDown = document.querySelector("#navbar__dropDown");
-      const navMobileToggle = document.querySelector(".navbar__mobileToggle");
-      const navExpandMobileToggle = document.querySelector(
-        ".navbar__expandmenu__mobileToggle"
-      );
-      const navbarCart = document.querySelector(".navbar__cart");
-      const navbarCartToggle = document.querySelector(".navbar__cartToggle");
-
-      const navbarCartToggleExpanded = document.querySelector(
-        ".navbar__cartToggle_expanded"
-      );
-      const blurPage = document.querySelector(".body-container");
-      const imgHovered = document.querySelector(".main-img");
-      const imgAlternative = document.querySelector(".alternative-img");
-
-      // navbar menu controller
-      navMobileToggle.addEventListener("click", () => {
-        // const visibility = navDropDown.getAttribute("data-visible");
-        navDropDown.setAttribute("data-visible", true);
-        navMobileToggle.setAttribute("aria-expanded", true);
-        blurPage.setAttribute("data-blur", true);
-      });
-
-      navExpandMobileToggle.addEventListener("click", () => {
-        navDropDown.setAttribute("data-visible", false);
-        navMobileToggle.setAttribute("aria-expanded", false);
-        blurPage.setAttribute("data-blur", false);
-      });
-
-      imgHovered.addEventListener("click", () => {});
-
-      //navbar cart controller
-
-      navbarCartToggle.addEventListener("click", () => {
-        navbarCart.setAttribute("data-visible", true);
-        navbarCartToggle.setAttribute("aria-expanded", true);
-        blurPage.setAttribute("data-blur", true);
-      });
-
-      navbarCartToggleExpanded.addEventListener("click", () => {
-        navbarCart.setAttribute("data-visible", false);
-        navbarCartToggle.setAttribute("aria-expanded", false);
-        blurPage.setAttribute("data-blur", false);
-      });
-
-      const triggerTabList = [].slice.call(
-        document.querySelectorAll("#myTab button")
-      );
-      triggerTabList.forEach(function (triggerEl) {
-        const tabTrigger = new bootstrap.Tab(triggerEl);
-
-        triggerEl.addEventListener("click", function (event) {
-          event.preventDefault();
-          tabTrigger.show();
-        });
-      });
-
-      //hover products item
+      //back to top btn
+      let toTopButton = document.getElementById("toTopButton");
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 500 ||
+          document.documentElement.scrollTop > 500
+        ) {
+          toTopButton.style.display = "block";
+        } else {
+          toTopButton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
     </script>
     <script>
       // testimonial controller
