@@ -535,35 +535,43 @@ ul {
   background-color: #fbf5f3;
 }
 .aboutSection__leftContents {
+  height: 400px;
+  position: relative;
   overflow: hidden;
 }
 
-.aboutSection-container {
+.about-background {
+  width: 100%;
+  height: 100%;
   position: relative;
-  max-width: 1920px;
-  margin: auto;
+  background-size: contain;
+  background-repeat: repeat;
+  background-image: url(assets/imgs/VivienPro-Hero-03.jpeg);
+  background-attachment: fixed;
+  filter: blur(3px);
 }
 
-.aboutSection__leftContents img {
-  object-fit: cover;
-  max-height: 800px;
-  width: 100%;
-  filter: blur(3px);
+.aboutSection-container {
+  max-width: 1920px;
+  margin: auto;
 }
 
 .aboutSection__mainImg {
   position: absolute;
   z-index: 10;
-  top: 5%;
-  left: 15%;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 60%;
 }
 
 .aboutSection__mainImg img {
   max-height: 600px;
-  width: 70%;
+  width: 100%;
   z-index: 10;
   object-fit: cover;
+  height: 100%;
 }
 
 .aboutSection__rightContents {
@@ -1105,25 +1113,28 @@ ul {
     height: 300px;
   }
 
+  .aboutSection__leftContents {
+    height: 700px;
+    overflow: visible;
+  }
+
   .aboutSection__mainImg {
     position: absolute;
     z-index: 10;
-    top: 5rem;
-    left: 20%;
-    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-5%, -50%);
+    height: 600px;
   }
 
   .aboutSection__mainImg img {
-    max-height: 700px;
-    width: 100%;
-    z-index: 10;
-    object-fit: cover;
+    height: 100%;
   }
 
   .aboutSection__rightContents {
     padding: 50px;
     padding-top: 75px;
-    padding-left: 150px;
+    padding-left: 100px;
   }
 
   .indexCategories-container {
