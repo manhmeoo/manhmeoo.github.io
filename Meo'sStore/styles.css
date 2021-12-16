@@ -927,7 +927,9 @@ ul {
 
 /* testimonial */
 .testimonial-section {
-  background-color: #fbf5f3;
+  background-image: url(assets/imgs/aboutSectionImg2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
   width: 100%;
   height: 350px;
   margin-top: 100px;
@@ -1006,6 +1008,7 @@ ul {
   font-family: pompiere;
   font-size: 13px;
   margin-left: 40px;
+  font-weight: bold;
 }
 
 .quote-paragraph span {
@@ -1143,11 +1146,7 @@ ul {
   }
 
   .testimonial-section {
-    background-color: #fbf5f3;
-    width: 100%;
     height: 250px;
-    margin-top: 100px;
-    position: relative;
   }
 
   .quote-paragraph {
