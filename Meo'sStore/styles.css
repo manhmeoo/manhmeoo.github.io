@@ -199,6 +199,7 @@ ul {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  position: relative;
 }
 
 .cart form {
@@ -208,7 +209,7 @@ ul {
 .nav-toggle form > .textbox {
   outline: 0;
   height: 42px;
-  width: 244px;
+  width: 100%;
   line-height: 42px;
   padding: 0 16px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -225,6 +226,8 @@ ul {
 }
 
 .nav-toggle form > .button {
+  position: absolute;
+  right: 0;
   outline: 0;
   background: none;
   background-color: #eccbbe;
@@ -1066,12 +1069,12 @@ ul {
 }
 
 .advert-title span {
-  color: #df2121;
+  color: #e0ab97;
 }
 
 .advert-subTitle {
   font-family: Madina;
-  color: #df2121;
+  color: #e0ab97;
 }
 
 .advert-paragraph {
@@ -1081,7 +1084,7 @@ ul {
 }
 
 .adver-btn {
-  background-color: black;
+  background-color: #eccbbe;
   color: #fff;
   width: 200px;
   height: 50px;
@@ -1093,7 +1096,7 @@ ul {
 }
 
 .adver-btn:hover {
-  background-color: #df2121;
+  background-color: #e0ab97;
   color: #fff;
 }
 /* advertise */
@@ -1254,15 +1257,6 @@ ul {
 
   .advert-title {
     font-size: 35px;
-  }
-
-  .advert-title span {
-    color: #df2121;
-  }
-
-  .advert-subTitle {
-    font-family: Madina;
-    color: #df2121;
   }
 
   .advert-paragraph {
