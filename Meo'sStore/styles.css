@@ -841,6 +841,18 @@ ul {
 }
 /* products */
 
+/* brand */
+.brandSwiper {
+  margin-top: 50px;
+}
+
+.brandSwiper .swiper-slide img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+/* brand */
+
 /* categories */
 .indexCategories-container {
   margin-top: 50px;
@@ -861,17 +873,18 @@ ul {
 .img-leftContent {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .indexCategories-container img {
   width: 100%;
   object-fit: cover;
   height: 100%;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .categories-title {
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: center;
   text-transform: capitalize;
   font-size: 30px;
@@ -914,7 +927,8 @@ ul {
   width: 100%;
   height: 100%;
   position: relative;
-  transition: all 1s;
+  transition: all 0.5s;
+  overflow: hidden;
 }
 
 .categories-text-big {
@@ -927,9 +941,10 @@ ul {
 
 /* testimonial */
 .testimonial-section {
-  background-image: url(assets/imgs/aboutSectionImg2.jpg);
+  background-image: url(assets/imgs/testimonial1.jpg);
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   width: 100%;
   height: 350px;
   margin-top: 100px;
@@ -1019,6 +1034,78 @@ ul {
   font-size: 18px;
 }
 /* testimonial */
+
+/* advertise */
+
+.advert {
+  max-width: 1920px;
+  position: relative;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.advert-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.advert-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.advert-title {
+  font-size: 25px;
+}
+
+.advert-title span {
+  color: #df2121;
+}
+
+.advert-subTitle {
+  font-family: Madina;
+  color: #df2121;
+}
+
+.advert-paragraph {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.adver-btn {
+  background-color: black;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: all 0.5s;
+  text-transform: uppercase;
+}
+
+.adver-btn:hover {
+  background-color: #df2121;
+  color: #fff;
+}
+/* advertise */
+
+/* footer */
+.footer-section {
+  width: 100%;
+  background-color: #212121;
+  height: 500px;
+  color: #fff;
+}
+/* footer */
 
 /* responsive */
 @media (min-width: 1024px) {
@@ -1146,7 +1233,44 @@ ul {
   }
 
   .testimonial-section {
-    height: 250px;
+    height: 300px;
+    background-position: unset;
+  }
+
+  .advert-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+  }
+
+  .advert-content {
+    left: 30%;
+    width: 600px;
+  }
+  .adver-btn {
+    margin-top: 20px;
+  }
+
+  .advert-title {
+    font-size: 35px;
+  }
+
+  .advert-title span {
+    color: #df2121;
+  }
+
+  .advert-subTitle {
+    font-family: Madina;
+    color: #df2121;
+  }
+
+  .advert-paragraph {
+    font-size: 16px;
+  }
+
+  .brandSwiper .swiper-slide {
+    padding: 50px;
   }
 
   .quote-paragraph {

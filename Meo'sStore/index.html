@@ -212,7 +212,7 @@
     </div>
     <!-- banner -->
     <!-- welcome section -->
-    <div class="container-fluid">
+    <div class="container-fluid" style="max-width: 1920px">
       <div class="welcome-container">
         <div class="welcome-left">
           <img src="assets/imgs/welcome15.jpg " />
@@ -1157,6 +1157,26 @@
       </div>
     </div>
     <!-- Categories -->
+    <!-- Advertise -->
+    <div class="advert">
+      <img class="advert-img" src="assets/imgs/advertise.jpg" />
+      <div class="advert-content">
+        <div class="advert-title advert-subTitle">Hurry Up !</div>
+        <div class="advert-title advert-mainTitle">
+          <span>Hurry Up!</span> Daily Deal Of The Day
+        </div>
+        <div class="advert-paragraph">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          porro ducimus harum eos nisi dicta laborum natus cupiditate iste animi
+          ad cum corrupti maxime aspernatur fugit, dignissimos, temporibus
+          sapiente? Magni. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Sint accusantium temporibus deleniti consectetur doloribus,
+          nobis praesentium.
+        </div>
+        <a type="button" class="adver-btn" href="#">DISCOVER NOW</a>
+      </div>
+    </div>
+    <!-- Advertise -->
     <!-- testimonial -->
     <div class="testimonial-section">
       <div class="testimonial-container">
@@ -1257,9 +1277,37 @@
       </div>
     </div>
     <!-- testimonial -->
-    <!-- brand -->
-    <div class="container" style="margin-top: 100px"></div>
-    <!-- brand -->
+    <!-- Brands -->
+    <div class="container">
+      <div class="swiper brandSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/imgs/brands/brand-logo-1-130x130.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/imgs/brands/brand-logo-2-130x130.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/imgs/brands/brand-logo-3-130x130.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/imgs/brands/brand-logo-4-130x130.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/imgs/brands/brand-logo-5-130x130.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/imgs/brands/brand-logo-6-130x130.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Brands -->
+    <!-- footer -->
+    <div class="footer-section" style="margin-top: 100px">
+      <h1>footer</h1>
+    </div>
+    <!-- footer -->
     <script
       src="https://kit.fontawesome.com/d37a3bbe69.js"
       crossorigin="anonymous"
@@ -1315,6 +1363,26 @@
         navigation: {
           nextEl: ".products-swiper-button-next",
           prevEl: ".products-swiper-button-prev",
+        },
+      });
+      var swiper = new Swiper(".brandSwiper", {
+        slidesPerView: 3,
+        loop: true,
+        spaceBetween: 40,
+        freeMode: true,
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          500: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 40,
+          },
         },
       });
     </script>
