@@ -1100,6 +1100,86 @@ ul {
   color: #fff;
 }
 /* advertise */
+/* blogs */
+.blogs {
+  position: relative;
+  margin-top: 100px;
+}
+
+.blogSwiper {
+  padding: 50px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.blogSwiper .card {
+  border: none;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 20%);
+}
+
+.blogSwiper img {
+  width: 100%;
+  max-height: 210px;
+  object-fit: cover;
+}
+
+.blogSwiper .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blogSwiper .card-title {
+  font-weight: bold;
+}
+
+.blogSwiper .card-text {
+  text-align: start;
+  color: #21212180;
+}
+
+.blogSwiper .card-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.blogs-btn {
+  height: 40px;
+  line-height: 40px;
+  width: 130px;
+  background-color: #eccbbe;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.blogs-btn:hover {
+  background-color: #e0ab97;
+  color: #fff;
+}
+
+.blogs-link {
+  float: right;
+}
+
+.blogs-link a {
+  color: #eccbbe;
+  font-size: 18px;
+}
+
+.blogs-link:hover a {
+  color: #e0ab97;
+}
+
+/* blogs */
+
+/* deal of day */
+.deal .Products__title {
+  margin-top: 50px;
+}
+/* deal of day */
 
 /* footer */
 .footer-section {
@@ -1273,6 +1353,21 @@ ul {
 
   .quote-paragraph span {
     font-size: 30px;
+  }
+
+  .blogSwiper-btn-next,
+  .blogSwiper-btn-prev {
+    display: none;
+  }
+
+  .blogs:hover .blogSwiper-btn-next,
+  .blogs:hover .blogSwiper-btn-prev {
+    display: flex;
+  }
+
+  .blogSwiper {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 /* responsive */
