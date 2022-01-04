@@ -776,7 +776,7 @@ ul {
 }
 
 .start-check .checked {
-  color: #ffa50080;
+  color: #eccbbe;
 }
 
 .Products__details .card-buttons {
@@ -1212,6 +1212,7 @@ ul {
 
 .sendLecter-submitBtn:hover {
   background-color: #e0ab97;
+  font-size: 24px;
 }
 /* sendletter */
 /* footer */
@@ -1219,6 +1220,37 @@ ul {
   width: 100%;
   height: 500px;
   color: #fff;
+}
+
+.footer-section ul {
+  padding: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer-section li span {
+  margin-left: 5px;
+}
+.footer-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-collapse-btn {
+  border: none;
+  color: #eccbbe;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.colapse-btn-details {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /* footer */
 
