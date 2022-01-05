@@ -1,23 +1,23 @@
 /* font for logo */
 @font-face {
   font-family: Madina;
-  src: url(assets/fonts/Madina.ttf);
+  src: url(../assets/fonts/Madina.ttf);
 }
 /* font for logo */
 
 @font-face {
   font-family: pompiere;
-  src: url(assets/fonts/Pompiere-Regular.ttf);
+  src: url(../assets/fonts/Pompiere-Regular.ttf);
 }
 
 @font-face {
   font-family: SoftElegance;
-  src: url(assets/fonts/SoftElegance.ttf);
+  src: url(../assets/fonts/SoftElegance.ttf);
 }
 
 @font-face {
   font-family: commercial;
-  src: url(assets/fonts//Montserrat-Regular.ttf);
+  src: url(../assets/fonts//Montserrat-Regular.ttf);
 }
 
 * {
@@ -531,7 +531,7 @@ ul {
   position: relative;
   background-size: contain;
   background-repeat: repeat;
-  background-image: url(assets/imgs/VivienPro-Hero-03.jpeg);
+  background-image: url(../assets/imgs/VivienPro-Hero-03.jpeg);
   background-attachment: fixed;
   filter: blur(3px);
 }
@@ -672,7 +672,7 @@ ul {
   font-weight: 500;
   padding: 0 0 23px;
   color: #212529;
-  background: url(assets/imgs/Seprator.png) no-repeat center bottom;
+  background: url(../assets/imgs/Seprator.png) no-repeat center bottom;
 }
 
 .Products__details {
@@ -925,7 +925,7 @@ ul {
   font-weight: 500;
   padding: 0 0 23px;
   color: #212529;
-  background: url(assets/imgs/Seprator.png) no-repeat center bottom;
+  background: url(../assets/imgs/Seprator.png) no-repeat center bottom;
 }
 
 .categories-text {
