@@ -1349,8 +1349,14 @@ ul {
   .nav-toggle .cart {
     display: none;
   }
+
   .nav-brand {
     font-size: 50px;
+    transition: all 0.25s;
+  }
+
+  .nav-brand:hover {
+    color: #eccbbe;
   }
 
   .banner__swiper-button-next::after,
