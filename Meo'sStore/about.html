@@ -39,27 +39,37 @@
                   <button
                     class="dropdown-toggle"
                     type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"
                   >
                     <i class="fas fa-bars"></i>
                   </button>
-                  <ul
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton1"
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel"
                   >
-                    <li><a class="dropdown-item" href="index.html">Home</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Categories</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Products</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Blogs</a>
-                    </li>
-                  </ul>
+                    <div class="offcanvas-header">
+                      <h5 id="offcanvasRightLabel">Menu</h5>
+                      <button
+                        type="button"
+                        class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Stores</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -111,7 +121,9 @@
           </div>
         </div>
         <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">
+          <div class=""></div>
+        </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
