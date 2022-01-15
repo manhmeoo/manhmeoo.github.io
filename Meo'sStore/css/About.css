@@ -194,6 +194,117 @@ body {
   font-weight: 700;
 }
 /* about-details */
+/* funfact section */
+.funfact-section {
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #b33139 0%,
+    rgba(0, 0, 0, 1) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.funfact-image {
+  position: absolute;
+  width: 1000px;
+  height: 100%;
+  top: 20px;
+  left: 200px;
+  background: url(../assets/imgs/About/download.jfif);
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* funfact section */
+/* aboutfooter */
+.About-footer {
+  width: 100%;
+  height: 100%;
+  background-color: #eccbbe;
+}
+
+.About-footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.About-footer-leftContents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.25fr 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+
+.About-footer-leftContents div {
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.footer-image-1 {
+  background: url(/assets/imgs/About/footer1);
+  grid-area: 1 / 1 / span 1 / span 2;
+  background-color: black;
+}
+
+.footer-image-2 {
+  background: url(/assets/imgs/About/footer2);
+  grid-area: 2 / 1 / span 2 / span 1;
+  background-color: green;
+}
+
+.footer-image-3 {
+  background: url(/assets/imgs/About/footer3);
+  grid-area: 2 / 2 / span 1 / span 1;
+  background-color: hotpink;
+}
+
+.footer-image-4 {
+  background: url(/assets/imgs/About/footer4);
+}
+
+.About-footer-rightContents {
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+}
+
+.About-footer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: start;
+  align-items: flex-start;
+  color: #fff;
+  height: 100%;
+  justify-content: center;
+}
+
+.About-footer-title {
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.About-footer-info {
+  font-size: 32px;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+/* aboutfooter */
 
 /* responsive */
 @media (min-width: 1024px) {
