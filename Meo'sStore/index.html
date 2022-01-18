@@ -22,160 +22,7 @@
       <i class="fas fa-chevron-up"></i>
     </button>
     <!-- navbar -->
-    <div class="navbar-section">
-      <div class="nav-above">
-        <div class="container">
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-discord"></i></a>
-          </div>
-          <div class="social-langController dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              LANGUAGE
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">English</a></li>
-              <li><a class="dropdown-item" href="#">korean</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid nav-main">
-        <div class="navbar-container">
-          <div class="nav-toggle">
-            <div class="cart">
-              <div
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasExample"
-                aria-controls="offcanvasExample"
-              >
-                <i class="fas fa-bars"></i>
-              </div>
-              <div
-                class="offcanvas offcanvas-start"
-                tabindex="-1"
-                id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel"
-              >
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                    Menu
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close text-reset"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#">Stores</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">Blogs</a></li>
-                    <li>
-                      <hr />
-                      <form method="post">
-                        <input
-                          type="text"
-                          class="textbox"
-                          placeholder="Search"
-                        />
-                        <input
-                          title="Search"
-                          value=""
-                          type="submit"
-                          class="button"
-                        />
-                      </form>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <form method="post">
-              <input type="text" class="textbox" placeholder="Search" />
-              <input title="Search" value="" type="submit" class="button" />
-            </form>
-          </div>
-          <div class="nav-brand">TEST</div>
-          <div class="nav-userContainer">
-            <div class="nav-item dropdown">
-              <a
-                href="#"
-                id="navbarDarkDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i class="fas fa-user"></i>
-              </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDarkDropdownMenuLink"
-              >
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </div>
-            <div class="cart">
-              <div
-                style="display: flex; align-items: center"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight"
-              >
-                <i class="fas fa-shopping-bag"></i>
-                <div class="cart-sup">
-                  <div>0</div>
-                </div>
-              </div>
-              <div
-                class="offcanvas offcanvas-end"
-                tabindex="-1"
-                id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel"
-              >
-                <div class="offcanvas-header">
-                  <h5 id="offcanvasRightLabel">Shopping Bag</h5>
-                  <button
-                    type="button"
-                    class="btn-close text-reset"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="offcanvas-body">...</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nav-bottom">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Stores</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Blogs</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div id="header"></div>
     <!-- navbar -->
     <!-- banner -->
     <div class="banner">
@@ -308,7 +155,7 @@
         <div class="Products__title">New Arrivals</div>
         <div class="newArival-container Products__details">
           <div class="swiper-slide">
-            <div class="card">
+            <a href="productDetails.html" class="card">
               <div class="products-img-container">
                 <img
                   src="assets/imgs/product1/product1-2.png"
@@ -337,10 +184,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="card">
+            <a href="productDetails.html" class="card">
               <div class="products-img-container">
                 <img
                   src="assets/imgs/product1/product7.jpg"
@@ -371,10 +218,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="card">
+            <a href="productDetails.html" class="card">
               <div class="products-img-container">
                 <img
                   src="assets/imgs/product1/product3-2.png"
@@ -403,10 +250,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="card">
+            <a href="productDetails.html" class="card">
               <div class="products-img-container">
                 <img
                   src="assets/imgs/product1/product5-2.png"
@@ -437,10 +284,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="card">
+            <a href="productDetails.html" class="card">
               <div class="products-img-container">
                 <img
                   src="assets/imgs/product1/product4-2.png"
@@ -471,10 +318,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="card">
+            <a href="productDetails.html" class="card">
               <div class="products-img-container">
                 <img
                   src="assets/imgs/product1/product6-2.jpg"
@@ -505,11 +352,11 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <div class="sell-btn">
-          <a href="ProductDetails.html" class="buyBtn btn2" type="button"
+          <a href="productLists.html" class="buyBtn btn2" type="button"
             >Explore More</a
           >
         </div>
@@ -713,7 +560,7 @@
               <div class="products-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product1-1.jpg"
@@ -747,10 +594,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product2-1.jpg"
@@ -786,10 +633,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product3-1.jpg"
@@ -823,10 +670,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product4-1.jpg"
@@ -862,10 +709,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product5-1.jpg"
@@ -901,10 +748,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product6-1.jpg"
@@ -940,7 +787,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div
@@ -960,7 +807,7 @@
               <div class="products-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product1-1.jpg"
@@ -994,10 +841,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product2-1.jpg"
@@ -1033,10 +880,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product3-1.jpg"
@@ -1070,10 +917,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product4-1.jpg"
@@ -1109,10 +956,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product5-1.jpg"
@@ -1148,10 +995,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product6-1.jpg"
@@ -1187,7 +1034,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div
@@ -1207,7 +1054,7 @@
               <div class="products-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product1-1.jpg"
@@ -1241,10 +1088,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product2-1.jpg"
@@ -1280,10 +1127,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product3-1.jpg"
@@ -1317,10 +1164,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product4-1.jpg"
@@ -1356,10 +1203,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product5-1.jpg"
@@ -1395,10 +1242,10 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div class="swiper-slide">
-                    <div class="card">
+                    <a href="productDetails.html" class="card">
                       <div class="products-img-container">
                         <img
                           src="assets/imgs/product1/product6-1.jpg"
@@ -1434,7 +1281,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 <div
@@ -1717,171 +1564,7 @@
     </div>
     <!-- sendLetter -->
     <!-- footer -->
-    <div class="footer-section">
-      <div class="container">
-        <div class="footer-container row">
-          <div class="col-md-3">
-            <button
-              class="footer-collapse-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#multiCollapseExample1"
-              aria-expanded="true"
-              aria-controls="multiCollapseExample1"
-            >
-              <div class="colapse-btn-details">
-                <span>STORE INFORMATION</span
-                ><i class="fas fa-chevron-down"></i>
-              </div>
-            </button>
-            <div id="multiCollapseExample1" class="collapse">
-              <div class="footer-title">STORE INFORMATION</div>
-              <ul class="footer-list">
-                <li>
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span
-                    >1<sup>st</sup> Dai Co Viet,Bach Khoa University,Ha
-                    Noi</span
-                  >
-                </li>
-                <li>
-                  <i class="fas fa-phone-alt"></i>
-                  <span>Call Us: 0912345678</span>
-                </li>
-                <li>
-                  <i class="fas fa-envelope"></i>
-                  <span>Email Us: Example@gmail.com</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <button
-              class="footer-collapse-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#multiCollapseExample2"
-              aria-expanded="true"
-              aria-controls="multiCollapseExample2"
-            >
-              <div class="colapse-btn-details">
-                <span>INFORMATION</span><i class="fas fa-chevron-down"></i>
-              </div>
-            </button>
-            <div id="multiCollapseExample2" class="collapse">
-              <div class="footer-title">INFORMATION</div>
-              <ul class="footer-list" style="color: black">
-                <li>
-                  <a href="#">About Us</a>
-                </li>
-                <li>
-                  <a href="#">Delivery Information</a>
-                </li>
-                <li>
-                  <a href="#">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#">Terms & Conditions</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <button
-              class="footer-collapse-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#multiCollapseExample3"
-              aria-expanded="true"
-              aria-controls="multiCollapseExample3"
-            >
-              <div class="colapse-btn-details">
-                <span>EXTRAS</span><i class="fas fa-chevron-down"></i>
-              </div>
-            </button>
-            <div id="multiCollapseExample3" class="collapse">
-              <div class="footer-title">EXTRAS</div>
-              <ul class="footer-list" style="color: black">
-                <li>
-                  <a href="#">Brands</a>
-                </li>
-                <li>
-                  <a href="#">Gift Certificates</a>
-                </li>
-                <li>
-                  <a href="#">Affiliates</a>
-                </li>
-                <li>
-                  <a href="#">Contact Us</a>
-                </li>
-                <li>
-                  <a href="#">Site Map</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <button
-              class="footer-collapse-btn"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#multiCollapseExample4"
-              aria-expanded="true"
-              aria-controls="multiCollapseExample4"
-            >
-              <div class="colapse-btn-details">
-                <span>MY ACCOUNT</span><i class="fas fa-chevron-down"></i>
-              </div>
-            </button>
-            <div id="multiCollapseExample4" class="collapse">
-              <div class="footer-title">MY ACCOUNT</div>
-              <ul class="footer-list" style="color: black">
-                <li>
-                  <a href="#">My Account</a>
-                </li>
-                <li>
-                  <a href="#">Order History</a>
-                </li>
-                <li>
-                  <a href="#">Wish List</a>
-                </li>
-                <li>
-                  <a href="#">Newsletter</a>
-                </li>
-                <li>
-                  <a href="#">Returns</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-links">
-        <div class="container">
-          <div class="socialMedia-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-discord"></i></a>
-          </div>
-          <div>Powered By ManhMeoo © 2022</div>
-          <div class="payment-methods">
-            <a href="#">
-              <img src="assets/imgs/pay1.png" />
-            </a>
-            <a href="#">
-              <img src="assets/imgs/pay2.png" />
-            </a>
-            <a href="#">
-              <img src="assets/imgs/pay3.png" />
-            </a>
-            <a href="#">
-              <img src="assets/imgs/pay4.png" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="footer"></div>
     <!-- footer -->
     <script
       src="https://kit.fontawesome.com/d37a3bbe69.js"
@@ -1898,6 +1581,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
     <script>
       // banner controller
       var swiper = new Swiper(".bannerSwipper", {
@@ -1989,28 +1673,6 @@
       });
     </script>
     <script>
-      //back to top btn
-      let toTopButton = document.getElementById("toTopButton");
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 500 ||
-          document.documentElement.scrollTop > 500
-        ) {
-          toTopButton.style.display = "block";
-        } else {
-          toTopButton.style.display = "none";
-        }
-      }
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
-    <script>
       // deal time count down
       const countdown = () => {
         // Specify the date and time we are counting down to.
@@ -2042,23 +1704,6 @@
 
       // should use 500 as setInterval won't always run on time.
       setInterval(countdown, 1000);
-    </script>
-    <script>
-      // footer
-      let collapseBtn = $(".collapse");
-
-      if (jQuery(window).width() >= 1024) {
-        collapseBtn[0].classList.add("show");
-        collapseBtn[1].classList.add("show");
-        collapseBtn[2].classList.add("show");
-        collapseBtn[3].classList.add("show");
-      }
-      if (jQuery(window).width() < 1024) {
-        collapseBtn[0].classList.remove("show");
-        collapseBtn[1].classList.remove("show");
-        collapseBtn[2].classList.remove("show");
-        collapseBtn[3].classList.remove("show");
-      }
     </script>
   </body>
 </html>

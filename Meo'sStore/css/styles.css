@@ -54,7 +54,30 @@ body {
 #toTopButton:hover {
   background-color: #e0ab97;
 }
+/* breadCrumb */
+.breadcrumb {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+  background-color: #3c393b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/assets/imgs/testimonial1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
+.breadcrumb-item {
+  font-weight: 900;
+}
+
+.breadcrumb-item-active {
+  font-weight: 100;
+}
+/* breadCrumb */
 a {
   text-decoration: none;
   color: #212529;

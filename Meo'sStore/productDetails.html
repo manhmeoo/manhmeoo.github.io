@@ -16,6 +16,7 @@
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/ProductDetails.css" />
   </head>
   <body>
     <!-- to Top button -->
@@ -32,12 +33,61 @@
         <li class="breadcrumb-item">
           <a href="index.html"><i class="fas fa-home"></i></a>
         </li>
+        <li class="breadcrumb-item" aria-current="page">
+          <a href="productLists.html">Product Lists</a>
+        </li>
         <li class="breadcrumb-item breadcrumb-item-active" aria-current="page">
-          Product Lists
+          Products Details
         </li>
       </ol>
     </nav>
+
     <!-- breadCrumb -->
+    <!-- pre-infoSection-->
+    <div class="pre-infoSection">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div
+              style="
+                --swiper-navigation-color: #fff;
+                --swiper-pagination-color: #fff;
+              "
+              class="swiper mySwiper2"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+      </div>
+    </div>
+    <!-- pre-infoSection -->
     <script
       src="https://kit.fontawesome.com/d37a3bbe69.js"
       crossorigin="anonymous"
