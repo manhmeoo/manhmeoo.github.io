@@ -53,12 +53,13 @@ body {
 
 #toTopButton:hover {
   background-color: #e0ab97;
+  color: #212121;
 }
 /* breadCrumb */
 .breadcrumb {
   margin-top: 10px;
   width: 100%;
-  height: 200px;
+  height: 100px;
   background-color: #3c393b;
   display: flex;
   justify-content: center;
@@ -731,8 +732,8 @@ ul {
 
 .products-img-container {
   position: relative;
-  overflow: hidden;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .main-img {
@@ -1589,6 +1590,10 @@ ul {
   .footer-links .container {
     flex-direction: row;
     height: 50px;
+  }
+
+  .breadcrumb {
+    height: 150px;
   }
 }
 /* responsive */
