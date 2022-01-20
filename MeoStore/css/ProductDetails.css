@@ -351,7 +351,6 @@ input::-webkit-inner-spin-button {
 .BuyBtn:hover {
   background-color: #e0ab97;
   color: #fff;
-  font-size: 21px;
 }
 /* process */
 /* right contents */
@@ -366,8 +365,8 @@ input::-webkit-inner-spin-button {
 .nav-tabs {
   width: 100%;
   background-color: #fff;
-
   display: flex;
+  flex-direction: row;
 }
 .nav-tabs {
   gap: 0 !important;
@@ -379,7 +378,7 @@ input::-webkit-inner-spin-button {
   flex-basis: 0;
   color: #212121;
   background-color: #fff;
-  border: solid 1px #eccbbe !important;
+  border: 1px solid #e7e3dc !important;
   margin: 0 !important;
   border-radius: 0 !important;
   height: 50px;
@@ -414,8 +413,6 @@ input::-webkit-inner-spin-button {
 
 .transportation-infoCol {
   color: #666;
-  padding: 30px !important;
-  padding-top: 0 !important;
 }
 
 .shipping-time-table {
@@ -434,12 +431,14 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-weight: 900;
+  font-size: 18px;
 }
 
 .question-input-place {
   height: 150px;
   width: 100%;
-  border: solid 1px #eccbbe;
+  border: solid 1px #66666680;
   padding: 15px;
   text-align: start;
   margin-top: 10px;
@@ -476,7 +475,6 @@ input::-webkit-inner-spin-button {
 .answer-details-container {
   margin-top: 10px;
   border-top: 2px solid #f0f0f0;
-  border-bottom: 2px solid #f0f0f0;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 50px;
@@ -487,6 +485,10 @@ input::-webkit-inner-spin-button {
   font-size: 18px;
   color: #212121;
   font-weight: 900;
+}
+
+.question-input:focus-visible {
+  outline: unset;
 }
 
 .answered-details-question {
@@ -512,14 +514,64 @@ input::-webkit-inner-spin-button {
 .answered-details-contents {
   margin-top: 10px;
   background-color: #fbf5f3;
-  max-height: 0px;
+  padding: 10px;
   overflow: hidden;
   transition: all 0.5s;
 }
 
-.answered-details-contents-active {
+.answered-details-subInfo {
   padding: 10px;
-  max-height: unset;
+  width: 100%;
+  border-top: solid 2px #f0f0f0;
+  text-align: start;
+  font-size: 14px;
+}
+
+.answered-details-subInfo:first-child {
+  border: unset;
+}
+
+.answered-details-subInfo-title {
+  color: #666;
+}
+
+.answered-details-subInfo-info {
+  color: #212121;
+  font-weight: 600;
+}
+
+.ProductInfo-contents {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*  details-infoSection */
+/* related product */
+.related-section {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.related-title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 0;
+  font-weight: 500;
+  padding: 0 0 23px;
+  color: #212529;
+  background: url(../assets/imgs/Seprator.png) no-repeat center bottom;
+}
+
+.Products__details {
+  overflow: hidden;
+  position: relative;
+  padding: 50px;
+  padding-top: 20px;
+}
+/* related product */

@@ -861,9 +861,9 @@ ul {
   background-color: #e0ab97;
   color: #fff;
 }
-.Products__details a:hover {
+/* .Products__details a:hover {
   color: #fff;
-}
+} */
 
 .Product-img-buttons {
   position: absolute;
