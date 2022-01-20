@@ -254,78 +254,371 @@
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <button
               class="nav-link active"
-              id="nav-home-tab"
+              id="nav-ProductInfo-tab"
               data-bs-toggle="tab"
-              data-bs-target="#nav-home"
+              data-bs-target="#nav-ProductInfo"
               type="button"
               role="tab"
-              aria-controls="nav-home"
+              aria-controls="nav-ProductInfo"
               aria-selected="true"
             >
-              Home
+              Product Information
             </button>
             <button
               class="nav-link"
-              id="nav-profile-tab"
+              id="nav-Question-tab"
               data-bs-toggle="tab"
-              data-bs-target="#nav-profile"
+              data-bs-target="#nav-Question"
               type="button"
               role="tab"
-              aria-controls="nav-profile"
-              aria-selected="false"
+              aria-controls="nav-Question"
+              aria-selected="true"
             >
-              Profile
+              Q&A<sup id="QuestQuantity">(1)</sup>
             </button>
             <button
               class="nav-link"
-              id="nav-contact-tab"
+              id="nav-transportation-tab"
               data-bs-toggle="tab"
-              data-bs-target="#nav-contact"
+              data-bs-target="#nav-transportation"
               type="button"
               role="tab"
-              aria-controls="nav-contact"
-              aria-selected="false"
+              aria-controls="nav-transportation"
+              aria-selected="true"
             >
-              Contact
+              Shipping/Return/Exchange
             </button>
             <button
               class="nav-link"
-              id="nav-contact-tab"
+              id="nav-Notice-tab"
               data-bs-toggle="tab"
-              data-bs-target="#nav-contact"
+              data-bs-target="#nav-Notice"
               type="button"
               role="tab"
-              aria-controls="nav-contact"
-              aria-selected="false"
+              aria-controls="nav-Notice"
+              aria-selected="true"
             >
-              Contact
+              Product Notice
             </button>
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
           <div
+            class="tab-pane fade show"
+            id="nav-ProductInfo"
+            role="tabpanel"
+            aria-labelledby="nav-ProductInfo-tab"
+          >
+            hello
+          </div>
+          <div
             class="tab-pane fade show active"
-            id="nav-home"
+            id="nav-Question"
             role="tabpanel"
-            aria-labelledby="nav-home-tab"
+            aria-labelledby="nav-Question-tab"
           >
-            ...
+            <div class="Question-tab-container">
+              <div class="question-input-container">
+                <div class="question-input-title">
+                  <div class="input-title">Write a product Q&A</div>
+                  <div class="words-count">
+                    <span>0</span><span> / 200</span>
+                  </div>
+                </div>
+                <div class="question-input-place">
+                  <textarea class="question-input" placeholder="Any Question ?""
+                  />
+                  <!-- <input
+                    type="text"
+                    class="question-input"
+                    placeholder="Any Question ?
+                  "
+                  /> -->
+                </div>
+                <div class="question-input-buttons">
+                  <button type="button" class="input-btn">
+                    <i class="far fa-images"></i>
+                    <span> images</span>
+                  </button>
+                  <button type="button" class="input-btn">
+                    <i class="far fa-file"></i>
+                    <span> files</span>
+                  </button>
+                  <button type="button" class="submit-btn input-btn">
+                    Submit
+                  </button>
+                </div>
+              </div>
+              <div class="answer-container">
+                <div class="answer-title">
+                  <span>Answered</span><span><sup>(2)</sup></span>
+                </div>
+                <div class="answer-details-container">
+                  <div class="row">
+                    <div class="col-10">
+                      <div class="answered-topic">Topic Here</div>
+                      <div class="answered-details">
+                        <div class="answered-details-question">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Neque iusto animi ea exercitationem saepe
+                            rerum corrupti sed in dolorem deserunt, doloremque,
+                            eaque praesentium maxime similique quis, ad quidem
+                            nam quo?
+                          </p>
+                          <img
+                            class="answered-question-img"
+                            src="assets/imgs/product1/demo-review.jpeg"
+                          />
+                        </div>
+                        <div class="answered-details-contents-controller">
+                          Click to see the answer
+                        </div>
+                        <div class="answered-details-contents">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing
+                          elit. Quaerat nesciunt vero odit et. Quos, esse
+                          voluptate reprehenderit voluptates necessitatibus
+                          maxime ab ipsa blanditiis ipsum, numquam, ad
+                          praesentium quis illo doloribus?
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-2">a</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div
-            class="tab-pane fade"
-            id="nav-profile"
+            class="tab-pane fade show"
+            id="nav-transportation"
             role="tabpanel"
-            aria-labelledby="nav-profile-tab"
+            aria-labelledby="nav-transportation-tab"
           >
-            ...
+            <table class="table Notice-table table-bordered">
+              <tr>
+                <td class="title-col col-3">Shipping information</td>
+                <td class="transportation-infoCol col-9">
+                  <div>
+                    <div>
+                      - When ordering multiple products, products that can be
+                      shipped immediately will be shipped sequentially.
+                    </div>
+                    <div>
+                      - Exchanges and refunds after purchase must be made within
+                      15 days of receipt.
+                    </div>
+                    <div>
+                      - Delivery schedule may change depending on the order
+                      status, and you can check it through 1:1 inquiry or
+                      customer center from the next day after ordering.
+                    </div>
+                    <div>
+                      - For some products, it may take up to 7-10 business days
+                      due to stock availability or custom production. The
+                      average delivery date for each product is as follows:
+                    </div>
+                  </div>
+                  <div class="shipping-time-table">
+                    <table class="table Notice-table table-bordered">
+                      <tbody>
+                        <tr>
+                          <td class="title-col col-6">clothes</td>
+                          <td class="notice-info">2-3 days</td>
+                        </tr>
+                        <tr>
+                          <td class="title-col">Shoes</td>
+                          <td class="notice-info">2-3 days</td>
+                        </tr>
+                        <tr>
+                          <td class="title-col">jewelry</td>
+                          <td class="notice-info">5 days</td>
+                        </tr>
+                        <tr>
+                          <td class="title-col">Handbag / Romanson</td>
+                          <td class="notice-info">4 days</td>
+                        </tr>
+                        <tr>
+                          <td class="title-col">Cosmetic</td>
+                          <td class="notice-info">2-3 days</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div>
+                    <div>
+                      * Delivery date is based on business days and may be
+                      delayed depending on stock availability and local courier
+                      circumstances.
+                    </div>
+                    <div>
+                      * Products purchased from the MeoStore online shopping
+                      mall cannot be picked up at the store.
+                    </div>
+                    <div>
+                      * An additional delivery fee of 2,500 won will be charged
+                      for Jeju/island/island areas.
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="title-col col-3">
+                  Cancellation / Exchange / Refund Return Information
+                </td>
+                <td class="transportation-infoCol col-9">
+                  <div>
+                    <div>
+                      - Order cancellation immediately after payment is
+                      completed can be processed directly at "My Page> Order
+                      Cancellation, Exchange, Return History". - If the status
+                      of the order is in preparation for the product, it may not
+                      be processed directly because it may have already been
+                      shipped or packaged, so please inquire through the
+                      customer center.
+                    </div>
+                    <div>
+                      - 100% exchange/refund will be given if the product is
+                      defective. (Shipping cost is borne by the head office)
+                    </div>
+                    <div>
+                      - In case of customer change of mind, shipping cost is
+                      borne by the customer.
+                    </div>
+                    <div>
+                      - Specially made products cannot be returned. (18k
+                      production, specification and size change)
+                    </div>
+                    <div>
+                      - Products with signs of use cannot be exchanged or
+                      returned.
+                    </div>
+                    <div>
+                      - Exchanges for products ordered online or for other
+                      products are not allowed.
+                    </div>
+                  </div>
+                  <div class="transportation-Warming">
+                    <div>
+                      * Jewelery: wear marks, scratches, etc. / Handbag:
+                      scratches, plated protective film, etc.
+                    </div>
+                    <div>
+                      * Beauty: In case the product packaging is damaged, used
+                      or lost, the product is damaged or damaged due to the
+                      customer’s negligence, or the virgin seal (sealing
+                      sticker) is opened
+                    </div>
+                    <div>
+                      * Perfume: If the protective wrapping paper (outer plastic
+                      packaging) is damaged
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      - Exchanges and refunds will be processed after the
+                      returned product has arrived, and exchanges or exchanges
+                      for other products are not allowed.
+                    </div>
+                    <div>
+                      - Credit card orders will be canceled 3-5 business days
+                      after the cancellation is completed. (※ In case of check
+                      card, it takes up to 10 days)
+                    </div>
+                    <div>
+                      - As each credit card company has a different cancellation
+                      processing period, please contact the credit card company
+                      for details.
+                    </div>
+                    <div>
+                      - For inquiries about other
+                      products/exchanges/shipping/refunds, please use the
+                      customer center.
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
           <div
-            class="tab-pane fade"
-            id="nav-contact"
+            class="tab-pane fade show"
+            id="nav-Notice"
             role="tabpanel"
-            aria-labelledby="nav-contact-tab"
+            aria-labelledby="nav-Notice-tab"
           >
-            ...
+            <table class="table Notice-table table-bordered">
+              <tbody>
+                <tr>
+                  <td class="title-col">Product Code</td>
+                  <td class="notice-info notice-product-code">
+                    JHNCHD1BS940IV980
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title-col">Kinds</td>
+                  <td class="notice-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae et perferendis sunt nam suscipit.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title-col">Material</td>
+                  <td class="notice-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae et perferendis sunt nam suscipit.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title-col">colour</td>
+                  <td class="notice-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae et perferendis sunt nam suscipit.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title-col">size</td>
+                  <td class="notice-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae et perferendis sunt nam suscipit.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title-col">manufacturer</td>
+                  <td class="notice-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae et perferendis sunt nam suscipit.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title-col">country of manufacture</td>
+                  <td class="notice-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae et perferendis sunt nam suscipit.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title-col">Quality Assurance Standards</td>
+                  <td class="notice-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae et perferendis sunt nam suscipit.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title-col">A/S manager and phone number</td>
+                  <td class="notice-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae et perferendis sunt nam suscipit.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="title-col">Handling Precautions</td>
+                  <td class="notice-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae et perferendis sunt nam suscipit.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -398,6 +691,19 @@
           document.querySelector("#price-calculated").innerHTML =
             Number(quantityInput.value) * Number(quantityPrice) + ".000";
         }
+      });
+
+      // Q&A function
+      const answeredController = document.querySelector(
+        ".answered-details-contents-controller"
+      );
+
+      const answeredContents = document.querySelector(
+        ".answered-details-contents"
+      );
+
+      answeredController.addEventListener("click", () => {
+        answeredContents.classList.toggle("answered-details-contents-active");
       });
     </script>
   </body>
