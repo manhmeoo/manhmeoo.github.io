@@ -143,7 +143,9 @@
                 <div class="col-md-3">
                   <div class="main-info-right">
                     <div class="main-info-icons">
-                      <a href="#"><i class="far fa-question-circle"></i></a>
+                      <a href="#nav-Question-tab"
+                        ><i class="far fa-question-circle"></i
+                      ></a>
                       <a href="#"><i class="far fa-heart"></i></a>
                       <a href="#"><i class="fas fa-share-alt"></i></a>
                     </div>
@@ -177,22 +179,24 @@
                 <div class="picker">
                   <div class="properties-title">color</div>
                   <div class="properties-choices">
-                    <div class="property-value">
+                    <div class="property-value property-value-color">
                       <div class="prop-color red"></div>
                     </div>
-                    <div class="property-value">
+                    <div class="property-value property-value-color">
                       <div class="prop-color pink"></div>
                     </div>
-                    <div class="property-value">
+                    <div class="property-value property-value-color">
                       <div class="prop-color green"></div>
                     </div>
-                    <div class="property-value">
+                    <div class="property-value property-value-color">
                       <div class="prop-color blue"></div>
                     </div>
-                    <div class="property-value property-value-active">
+                    <div
+                      class="property-value property-value-color property-value-active"
+                    >
                       <div class="prop-color yellow"></div>
                     </div>
-                    <div class="property-value">
+                    <div class="property-value property-value-color">
                       <div class="prop-color gray"></div>
                     </div>
                   </div>
@@ -200,11 +204,15 @@
                 <div class="picker">
                   <div class="properties-title">size</div>
                   <div class="properties-choices">
-                    <div class="property-value">M</div>
-                    <div class="property-value property-value-active">L</div>
-                    <div class="property-value">XL</div>
-                    <div class="property-value">XXL</div>
-                    <div class="property-value">XXL</div>
+                    <div class="property-value property-value-size">M</div>
+                    <div
+                      class="property-value property-value-size property-value-active"
+                    >
+                      L
+                    </div>
+                    <div class="property-value property-value-size">XL</div>
+                    <div class="property-value property-value-size">XXL</div>
+                    <div class="property-value property-value-size">XXL</div>
                   </div>
                 </div>
               </div>
@@ -274,7 +282,7 @@
               aria-controls="nav-Question"
               aria-selected="true"
             >
-              Q&A<sup id="QuestQuantity">(1)</sup>
+              Q&A<sup class="QuestQuantity">(2)</sup>
             </button>
             <button
               class="nav-link"
@@ -343,14 +351,14 @@
                 <div class="question-input-title">
                   <div class="input-title">Write a product Q&A</div>
                   <div class="words-count">
-                    <span>0</span><span> / 500</span>
+                    <span id="wordsCounted">0</span><span> / 500</span>
                   </div>
                 </div>
                 <div class="question-input-place">
                   <textarea
                     maxlength="500"
-                    id="w3review"
-                    name="w3review"
+                    id="wordsQuantity"
+                    name="wordsQuantity"
                     class="question-input"
                   ></textarea>
                 </div>
@@ -370,7 +378,8 @@
               </div>
               <div class="answer-container">
                 <div class="answer-title">
-                  <span>Answered</span><span><sup>(2)</sup></span>
+                  <span>Answered</span
+                  ><span><sup class="QuestQuantity">(2)</sup></span>
                 </div>
                 <div class="answer-details-container">
                   <div class="row">
@@ -1049,6 +1058,57 @@
           document.querySelector("#price-calculated").innerHTML =
             Number(quantityInput.value) * Number(quantityPrice) + ".000";
         }
+      });
+
+      // count words
+      let wordsCounted = document.getElementById("wordsCounted");
+
+      const getTheWord = (selectionStart, value) => {
+        let arr = value.split(" ");
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i].length;
+          return sum;
+        }
+      };
+
+      const myArea = document.getElementById("wordsQuantity");
+      myArea.value = "";
+      myArea.oninput = (e) => {
+        let i = e.currentTarget.selectionStart;
+        wordsCounted.innerHTML = `${getTheWord(i, myArea.value)}`;
+      };
+      //
+
+      //picker properties
+      const colorPicked = $(".property-value-color");
+      const sizePicked = $(".property-value-size");
+
+      $(function () {
+        colorPicked.click(function () {
+          $(this)
+            .addClass("property-value-active")
+            .siblings()
+            .removeClass("property-value-active");
+        });
+      });
+
+      $(function () {
+        sizePicked.click(function () {
+          $(this)
+            .addClass("property-value-active")
+            .siblings()
+            .removeClass("property-value-active");
+        });
+      });
+
+      //quest quantity
+      let questQuantity = document.querySelectorAll(".QuestQuantity");
+      const questNumber = document.querySelectorAll(
+        ".answer-details-container"
+      );
+      questQuantity.forEach((e) => {
+        e.innerHTML = `(${questNumber.length})`;
       });
     </script>
   </body>
